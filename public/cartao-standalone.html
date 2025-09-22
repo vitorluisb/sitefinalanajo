@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Visita Digital - Associação Anajô</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+
+    <!-- Background decorativo clean -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-blue-400/20 to-blue-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-300/15 to-blue-400/15 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Partículas flutuantes clean -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute w-1 h-1 bg-blue-300/30 rounded-full animate-float" style="left: 20%; top: 30%; animation-delay: 0s; animation-duration: 4s;"></div>
+        <div class="absolute w-1 h-1 bg-blue-300/30 rounded-full animate-float" style="left: 80%; top: 20%; animation-delay: 1s; animation-duration: 5s;"></div>
+        <div class="absolute w-1 h-1 bg-blue-300/30 rounded-full animate-float" style="left: 60%; top: 70%; animation-delay: 2s; animation-duration: 6s;"></div>
+        <div class="absolute w-1 h-1 bg-blue-300/30 rounded-full animate-float" style="left: 30%; top: 80%; animation-delay: 3s; animation-duration: 4.5s;"></div>
+        <div class="absolute w-1 h-1 bg-blue-300/30 rounded-full animate-float" style="left: 70%; top: 50%; animation-delay: 1.5s; animation-duration: 5.5s;"></div>
+    </div>
+
+    <main class="container mx-auto py-8 px-4 relative z-10">
+        <!-- Cartão Principal -->
+        <div class="max-w-5xl mx-auto">
+            <div id="business-card" class="bg-white/95 backdrop-blur-2xl rounded-[2rem] shadow-2xl border border-white/30 overflow-hidden animate-fade-in relative group">
+                <!-- Efeito de brilho -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Header do Cartão -->
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 md:p-12 text-center relative overflow-hidden">
+                    <!-- Padrão decorativo clean -->
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full -translate-y-16 translate-x-16"></div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/20 rounded-full translate-y-12 -translate-x-12"></div>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex justify-center mb-6 md:mb-8">
+                            <img 
+                                src="./logoanajo.png" 
+                                alt="Logo ANAJÔ"
+                                class="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain drop-shadow-2xl"
+                            />
+                        </div>
+                        
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight text-white">
+                            Associação Anajô
+                        </h1>
+                        <p class="text-xl md:text-2xl text-blue-100 mb-3 font-semibold">Transformando Vidas Através da Educação e Esporte</p>
+                        <p class="text-lg md:text-xl text-blue-200/90 max-w-2xl mx-auto leading-relaxed">ONG - Desenvolvimento Social e Cultural</p>
+                        
+                        <!-- Badge de destaque -->
+                        <div class="inline-flex items-center space-x-2 mt-4 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-blue-200"></i>
+                            <span class="text-white font-medium">Transformando Vidas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo do Cartão -->
+                <div class="p-6 md:p-8">
+
+                    <!-- Informações de Contato -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <!-- Telefone -->
+                        <div class="flex items-center space-x-4 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Telefone</p>
+                                <button onclick="openWhatsApp()" class="text-blue-600 font-semibold hover:underline flex items-center">
+                                    +55 83 8856-7721
+                                    <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-center space-x-4 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">E-mail</p>
+                                <button onclick="openEmail()" class="text-green-600 font-semibold hover:underline flex items-center">
+                                    hail.capoeira@hotmail.com
+                                    <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Endereço -->
+                        <div class="flex items-center space-x-4 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors md:col-span-2">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Endereço</p>
+                                <p class="text-green-600 font-semibold">Parque do Encontro - Nordeste, Guarabira - PB, 58200-000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociais -->
+                    <div class="mb-6 md:mb-8">
+                        <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4">Redes Sociais</h3>
+                        <div class="flex flex-wrap gap-2 md:gap-4">
+                            <button onclick="openSocial('https://instagram.com/anajo_ong')" class="flex items-center space-x-1 md:space-x-2 px-3 md:px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 text-sm md:text-base">
+                                <i data-lucide="instagram" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                <span class="hidden sm:inline">Instagram</span>
+                            </button>
+
+                            <button onclick="openSocial('https://facebook.com/anajo.ong')" class="flex items-center space-x-1 md:space-x-2 px-3 md:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 text-sm md:text-base">
+                                <i data-lucide="facebook" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                <span class="hidden sm:inline">Facebook</span>
+                            </button>
+
+                            <button onclick="openSocial('https://anajo.org.br')" class="flex items-center space-x-1 md:space-x-2 px-3 md:px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 text-sm md:text-base">
+                                <i data-lucide="globe" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                <span class="hidden sm:inline">Site</span>
+                            </button>
+
+                            <button onclick="openWhatsApp()" class="flex items-center space-x-1 md:space-x-2 px-3 md:px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 transform hover:-translate-y-0.5 text-sm md:text-base">
+                                <i data-lucide="message-circle" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                <span class="hidden sm:inline">WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Ação -->
+                    <div class="text-center space-y-4">
+                        <!-- QR Code -->
+                        <div>
+                            <button onclick="showQRCode()" class="btn-outline inline-flex items-center space-x-2 px-6 py-3 text-base">
+                                <i data-lucide="qr-code" class="w-5 h-5"></i>
+                                <span>Ver QR Code do Cartão</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Download PDF -->
+                        <div>
+                            <button onclick="downloadPDF()" id="downloadBtn" class="btn-primary inline-flex items-center space-x-2 px-8 py-4 text-lg">
+                                <i data-lucide="download" class="w-6 h-6"></i>
+                                <span>Baixar Cartão em PDF</span>
+                            </button>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Salve este cartão no seu dispositivo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer do Cartão -->
+            <div class="text-center mt-8 text-gray-500">
+                <p class="text-sm">
+                    Cartão de visita digital gerado pela <span class="text-blue-600 font-semibold">Associação Anajô</span>
+                </p>
+                <p class="text-xs mt-1">
+                    Última atualização: <span id="currentDate"></span>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+
+        // Definir data atual
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('pt-BR');
+
+        // Funções de interação
+        function openWhatsApp() {
+            window.open('https://wa.me/5583885677721', '_blank');
+        }
+
+        function openEmail() {
+            window.location.href = 'mailto:hail.capoeira@hotmail.com';
+        }
+
+        function openSocial(url) {
+            window.open(url, '_blank');
+        }
+
+        function showQRCode() {
+            // Criar QR Code com informações do cartão
+            const qrData = `BEGIN:VCARD
+VERSION:3.0
+FN:Associação Anajô
+ORG:Associação Anajô
+TITLE:Transformando Vidas Através da Educação e Esporte
+TEL:+5583885677721
+EMAIL:hail.capoeira@hotmail.com
+URL:https://anajo.org.br
+ADR:;;Parque do Encontro - Nordeste;Guarabira;PB;58200-000;Brasil
+END:VCARD`;
+            
+            // Abrir QR Code em nova janela
+            const qrWindow = window.open('', '_blank', 'width=400,height=400');
+            qrWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>QR Code - Associação Anajô</title>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+                    <style>
+                        body { 
+                            font-family: Arial, sans-serif; 
+                            text-align: center; 
+                            padding: 20px; 
+                            background: #f5f5f5;
+                        }
+                        .qr-container { 
+                            background: white; 
+                            padding: 20px; 
+                            border-radius: 10px; 
+                            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                            display: inline-block;
+                        }
+                        h1 { color: #2563eb; margin-bottom: 20px; }
+                        #qrcode { margin: 20px 0; }
+                        p { color: #666; font-size: 14px; }
+                    </style>
+                </head>
+                <body>
+                    <div class="qr-container">
+                        <h1>Associação Anajô</h1>
+                        <div id="qrcode"></div>
+                        <p>Escaneie para salvar o contato</p>
+                    </div>
+                    <script>
+                        QRCode.toCanvas(document.getElementById('qrcode'), \`${qrData}\`, function (error) {
+                            if (error) console.error(error);
+                        });
+                    </script>
+                </body>
+                </html>
+            `);
+        }
+
+        async function downloadPDF() {
+            const btn = document.getElementById('downloadBtn');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i><span>Gerando PDF...</span>';
+            btn.disabled = true;
+            
+            try {
+                const card = document.getElementById('business-card');
+                const canvas = await html2canvas(card, {
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: '#ffffff'
+                });
+                
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'mm',
+                    format: 'a4'
+                });
+                
+                const imgWidth = 190;
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                const x = (210 - imgWidth) / 2;
+                const y = (297 - imgHeight) / 2;
+                
+                pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
+                
+                pdf.setFontSize(10);
+                pdf.setTextColor(100, 100, 100);
+                pdf.text('Cartão de Visita Digital - Associação Anajô', 15, 20);
+                pdf.text(`Gerado em: ${new Date().toLocaleDateString('pt-BR')}`, 15, 25);
+                
+                pdf.save('cartao-visita-associacao-anajo.pdf');
+                
+            } catch (error) {
+                console.error('Erro ao gerar PDF:', error);
+                alert('Erro ao gerar PDF. Tente novamente.');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                lucide.createIcons();
+            }
+        }
+    </script>
+</body>
+</html>

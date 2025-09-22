@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ONG Anajô Design System - Paleta moderna, limpa e vibrante */
+
+@layer base {
+  :root {
+    /* Fundo branco como base */
+    --background: 0 0% 100%;
+    --foreground: 222 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 15% 20%;
+
+    /* Azul claro como cor predominante */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 217 100% 95%;
+
+    /* Azul secundário para harmonia */
+    --secondary: 224 76% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-soft: 224 100% 93%;
+
+    /* Verde como cor de destaque */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 142 76% 91%;
+
+    /* Amarelo como cor de destaque */
+    --warning: 48 96% 53%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 54 91% 88%;
+
+    /* Vermelho como cor de destaque */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 93% 94%;
+
+    /* Roxo mantido para criatividade */
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 262 100% 95%;
+
+    /* Cores neutras */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 25% 46%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 95%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradientes modernos */
+    --gradient-hero: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(262, 83%, 58%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(224, 76%, 48%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(45, 93%, 47%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(34, 197, 94) 0%, hsl(34, 197, 94) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(234, 179, 8) 0%, hsl(234, 179, 8) 100%);
+    --gradient-destructive: linear-gradient(135deg, hsl(239, 68, 68) 0%, hsl(239, 68, 68) 100%);
+
+    /* Sombras elegantes */
+    --shadow-soft: 0 4px 20px -2px hsl(217 91% 60% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(217 91% 60% / 0.15);
+    --shadow-impact: 0 12px 40px -10px hsl(217 91% 60% / 0.25);
+
+    /* Transições suaves */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 15% 20%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 15% 20%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 84% 5%;
+    --primary-soft: 217 50% 15%;
+
+    --secondary: 224 76% 55%;
+    --secondary-foreground: 222 84% 5%;
+    --secondary-soft: 224 50% 15%;
+
+    --success: 142 71% 55%;
+    --success-foreground: 222 84% 5%;
+    --success-soft: 142 50% 15%;
+
+    --warning: 48 96% 63%;
+    --warning-foreground: 222 84% 5%;
+    --warning-soft: 45 50% 15%;
+
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 222 84% 5%;
+    --destructive-soft: 0 50% 15%;
+
+    --accent: 262 83% 65%;
+    --accent-foreground: 222 84% 5%;
+    --accent-soft: 262 50% 15%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 65%;
+
+    --sidebar-background: 222 84% 5%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 222 84% 5%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+}
+
+@layer components {
+  /* Componentes reutilizáveis do design system */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .card-elegant {
+    @apply bg-card rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/20 transform hover:-translate-y-1;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animações personalizadas */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Estados de hover para cards */
+  .project-card {
+    @apply card-elegant overflow-hidden cursor-pointer;
+  }
+
+  .project-card img {
+    @apply transition-transform duration-500;
+  }
+
+  .project-card:hover img {
+    @apply transform scale-105;
+  }
+
+  /* Form styles */
+  .form-input {
+    @apply w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 bg-background;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-foreground mb-2;
+  }
+
+  /* Scroll animations */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-slide-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-slide-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-scale.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Accent color utilities */
+  .accent-green {
+    @apply border-l-4 border-success bg-success-soft;
+  }
+
+  .accent-yellow {
+    @apply border-l-4 border-warning bg-warning-soft;
+  }
+
+  .accent-red {
+    @apply border-l-4 border-destructive bg-destructive-soft;
+  }
+}

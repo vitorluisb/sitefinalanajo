@@ -1,0 +1,542 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "volunteer": "Volunteer",
+    "donate": "Donate",
+    "contact": "Contact"
+  },
+  "hero": {
+    "slide1": {
+      "alt": "Jiujitsu",
+      "title": "Transforming Lives Through Sports",
+      "subtitle": "Developing talents and character through sports practice"
+    },
+    "slide2": {
+      "alt": "Capoeira Children",
+      "subtitle": "More than capoeira: a home of dreams, education and opportunities for our children"
+    },
+    "slide3": {
+      "alt": "Youth in cultural activity",
+      "title": "Every child deserves to flourish",
+      "subtitle": "We work to ensure that boys and girls have a protected childhood and a future of opportunities."
+    },
+    "slide4": {
+      "alt": "Training capoeira",
+      "title": "United by Sports and Community",
+      "subtitle": "Strengthening bonds and building a better society"
+    },
+    "description": "At Anajô NGO, we believe every child deserves opportunities to grow, learn and dream. Join us in this mission to transform communities.",
+    "donateButton": "Donate",
+    "volunteerButton": "Volunteer",
+    "stats": {
+      "children": "Children Served",
+      "projects": "Active Projects",
+      "years": "Years of Impact"
+    },
+    "watchVideo": "Watch our video",
+    "title": "Transformando vidas através da educação e esporte",
+    "subtitle": "A ONG Anajô trabalha para oferecer oportunidades de desenvolvimento pessoal e social para crianças e jovens em situação de vulnerabilidade.",
+    "cta": "Saiba mais",
+    "donate": "Doar agora"
+  },
+  "about": {
+    "title": "Sobre a ONG Anajô",
+    "description": "Fundada em 2015, a ONG Anajô atua na promoção do desenvolvimento integral de crianças e jovens em situação de vulnerabilidade social. Através de projetos educacionais, esportivos e culturais, buscamos criar oportunidades de crescimento pessoal e profissional.",
+    "mission": {
+      "title": "Nossa Missão",
+      "description": "Promover o desenvolvimento integral de crianças e jovens através da educação, esporte e cultura, contribuindo para a construção de uma sociedade mais justa e igualitária."
+    },
+    "objective": {
+      "title": "Main Objective",
+      "description": "To promote healthy development and comprehensive education of children and adolescents, creating conditions to expand self-esteem, citizenship and joy through qualified activities in safe and humanized environments."
+    },
+    "subtitle": "Nossa missão é transformar vidas através da educação, esporte e cultura",
+    "vision": {
+      "title": "Nossa Visão",
+      "description": "Ser referência em projetos sociais que transformam vidas e comunidades, criando um futuro melhor para todos."
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "items": [
+        "Respeito e dignidade humana",
+        "Transparência e ética",
+        "Compromisso social",
+        "Inovação e criatividade",
+        "Trabalho em equipe"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Nossos Projetos",
+    "subtitle": "Conheça as iniciativas que estão transformando vidas",
+    "participants": "participants",
+    "branches": "branches",
+    "schedules": "Various schedules",
+    "viewAll": "View All Projects",
+    "education": {
+      "title": "Educação",
+      "description": "Programas educacionais complementares que apoiam o desenvolvimento acadêmico e pessoal dos participantes."
+    },
+    "sports": {
+      "title": "Esportes",
+      "description": "Atividades esportivas que promovem saúde, disciplina e trabalho em equipe."
+    },
+    "culture": {
+      "title": "Cultura",
+      "description": "Projetos culturais que valorizam a identidade local e promovem a expressão artística."
+    }
+  },
+  "volunteer": {
+    "title": "Seja um Voluntário",
+    "subtitle": "Junte-se a nós e faça a diferença na vida de crianças e jovens",
+    "description": "Oferecemos diversas oportunidades de voluntariado para pessoas que desejam contribuir com nossos projetos.",
+    "joinUs": "I want to volunteer",
+    "opportunities": {
+      "title": "Oportunidades",
+      "education": "Apoio educacional",
+      "sports": "Instrutor esportivo",
+      "events": "Organização de eventos",
+      "administration": "Apoio administrativo"
+    },
+    "requirements": {
+      "title": "Requisitos",
+      "items": [
+        "Maior de 16 anos",
+        "Disponibilidade mínima de 4 horas semanais",
+        "Comprometimento com os valores da ONG",
+        "Participação em treinamento inicial"
+      ]
+    },
+    "cta": "Inscreva-se"
+  },
+  "footer": {
+    "mission": "Transforming lives through sports, education and culture. We believe in the potential of every child and young person to build a better future.",
+    "quickLinks": "Links Rápidos",
+    "contact": "Contato",
+    "followUs": "Follow us",
+    "copyright": "© 2024 Anajô Association. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "description": "Transformando vidas através da educação, esporte e cultura.",
+    "social": "Redes Sociais",
+    "rights": "Todos os direitos reservados."
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos aqui para ajudar",
+    "name": "Name",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Send message",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "hours": "Horário de funcionamento",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar"
+    }
+  },
+  "donate": {
+    "title": "Faça uma Doação",
+    "subtitle": "Sua contribuição faz a diferença",
+    "description": "Com sua doação, podemos expandir nossos projetos e atender mais crianças e jovens.",
+    "amount": "Donation amount",
+    "monthly": "Monthly donation",
+    "oneTime": "One-time donation",
+    "donate": "Donate now",
+    "amounts": {
+      "monthly": "Mensal",
+      "single": "Única vez"
+    },
+    "methods": {
+      "title": "Formas de Doação",
+      "pix": "PIX",
+      "bank": "Transferência bancária",
+      "card": "Cartão de crédito"
+    }
+  },
+  "mission": {
+    "title": "Who We Are",
+    "subtitle": "Anajô NGO was born from the dream of transforming realities through sport, education and culture. Each project is a seed of hope planted in the heart of the community.",
+    "values": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To act for local development, strengthening and qualifying support actions for children, adolescents, families and communities in situations of social vulnerability."
+      },
+      "objective": {
+        "title": "Main Objective",
+        "description": "To promote healthy development and comprehensive education of children and adolescents, creating conditions to expand self-esteem, citizenship and joy through qualified activities in safe and humanized environments."
+      },
+      "belief": {
+        "title": "Our Belief",
+        "description": "We believe that everyone, adults and children, have creative capacities and potential. We act to help them find answers to their questions, valuing their own knowledge."
+      },
+      "impact": {
+        "title": "Social Impact",
+        "description": "To act in combating child labor and preventing sexual exploitation of children and adolescents in the region where the association is located."
+      }
+    },
+    "quote": "Every child who goes through our projects takes with them not only knowledge, but the certainty that their dreams are possible and valid."
+  },
+  "supporters": {
+    "title": "Our Supporters",
+    "subtitle": "Meet the companies and individuals who believe in our cause and help us build a better future.",
+    "partner": "Partner",
+    "partnerSince": "Partner since {{since}}",
+    "companies": {
+      "prefeitura": {
+        "name": "Guarabira City Hall",
+        "contribution": "Financial support"
+      },
+      "pm": {
+        "name": "4th Battalion of the Military Police of Paraíba",
+        "contribution": "Partnership for weekly workshops on music, jiu-jitsu, and kickboxing at ANAJÔ I headquarters."
+      },
+      "kinder": {
+        "name": "Kinderhilfswerk Anajô",
+        "contribution": "Partner organization in Austria that provides fundamental financial support for the construction of the physical space, purchase of equipment, and maintenance of resources. They also work on raising awareness in European society and fundraising."
+      },
+      "ideal": {
+        "name": "Ideal Capoeira Europa",
+        "contribution": "Partner organization in Austria that provides fundamental financial support for the construction of the physical space, purchase of equipment, and maintenance of resources. They also work on raising awareness in European society and fundraising."
+      }
+    },
+    "individuals": {
+      "maria": {
+        "name": "Maria Silva",
+        "role": "Regular Donor",
+        "contribution": "Monthly donation",
+        "testimonial": "I believe in the transformative power of education."
+      },
+      "joao": {
+        "name": "João Santos",
+        "role": "Senior Volunteer",
+        "contribution": "Sports coordination",
+        "testimonial": "Sport changed my life, now I want to change others'."
+      },
+      "ana": {
+        "name": "Ana Costa",
+        "role": "Mentor",
+        "contribution": "Professional guidance",
+        "testimonial": "Every young person has a unique potential that deserves to be developed."
+      }
+    }
+  },
+  "news": {
+    "title": "Novidades do Projeto",
+    "announcements": "Avisos",
+    "improvements": "Melhorias"
+  },
+  "announcements": {
+    "title": "Avisos Importantes",
+    "subtitle": "Fique por dentro das últimas novidades e oportunidades da ONG Anajô",
+    "urgent": "Urgente",
+    "readMore": "Ler mais"
+  },
+  "events": {
+    "title": "Eventos",
+    "subtitle": "Participe dos nossos eventos e atividades",
+    "expectedParticipants": "expected participants",
+    "viewGallery": "View Photo Gallery",
+    "photos": "photos"
+  },
+  "language": {
+    "select": "Select language",
+    "portuguese": "Portuguese",
+    "english": "English",
+    "german": "German"
+  },
+  "projectsPage": {
+    "title": "Our Projects",
+    "description": "Learn about all the projects we develop to transform lives through sports, education and culture.",
+    "categories": {
+      "all": "All",
+      "sports": "Sports",
+      "education": "Education",
+      "culture": "Culture"
+    },
+    "viewGallery": "View Project Photo Gallery",
+    "participants": "participants",
+    "locations": "locations",
+    "cta": {
+      "title": "Want to Participate?",
+      "description": "All of our projects are free and open to the community. If you are interested in participating, please contact us or consider becoming a volunteer.",
+      "contact": "Contact Us",
+      "volunteer": "Be a Volunteer"
+    },
+    "filterBy": "Filter by:",
+    "totalDuration": "Total duration",
+    "results": "🎯 Results Achieved",
+    "requirements": "📋 Requirements",
+    "instructor": "👨‍🏫 Instructor"
+  },
+  "projectData": {
+    "capoeira": {
+      "title": "Capoeira Classes",
+      "description": "Capoeira classes for children and adolescents, developing motor, cognitive, and social skills.",
+      "impact": "Comprehensive development of more than 100 young people.",
+      "gallery": {
+        "alt": "Capoeira class in progress",
+        "caption": "Young people learning capoeira in the community space"
+      }
+    },
+    "football": {
+      "title": "Football School",
+      "description": "Football training for children and teenagers, developing technical, tactical skills and values such as discipline, respect and teamwork.",
+      "gallery": {
+        "training": "Technical training focused on fundamentals",
+        "friendly": "Friendly match between school teams",
+        "championship": "Participation in regional championship"
+      }
+    },
+    "music": {
+      "title": "Music Classes",
+      "description": "Music and musical instrument classes.",
+      "gallery": {
+        "dance": "Folk dance class",
+        "presentation": "Musical presentation at community event",
+        "theater": "Theater play rehearsal"
+      }
+    },
+    "jiujitsu": {
+      "title": "Jiu-Jitsu",
+      "description": "Jiu-Jitsu classes for children and teenagers, developing motor, cognitive, social skills and self-defense.",
+      "gallery": {
+        "training": "Training focused on basic Jiu-Jitsu techniques",
+        "competition": "Participation in municipal competition",
+        "award": "Championship award ceremony"
+      }
+    },
+    "tutoring": {
+      "title": "School Tutoring",
+      "description": "Educational support for children with learning difficulties in mathematics and Portuguese, with playful and personalized methodology.",
+      "duration": "School year",
+      "instructor": "Educational Team",
+      "results": [
+        "80% improvement in participants' grades",
+        "95% approval in the school year",
+        "100% increase in self-confidence"
+      ],
+      "requirements": "Children aged 6-12 with school difficulties",
+      "gallery": {
+        "alt": "Tutoring class",
+        "caption": "School tutoring class with playful methodology"
+      }
+    },
+    "locations": {
+      "anajo1": "Anajô I - Northeast",
+      "anajo2": "Anajô II - Rosário",
+      "anajo3": "Anajô III - Cordeiro",
+      "anajo4": "Anajô IV - Mutirão"
+    },
+    "schedules": {
+      "friday": "Friday, 8:00 to 9:30 / 2:00 to 3:30 PM",
+      "mondayThursday": "Monday and Thursday, 5:30 to 7:00 PM",
+      "wednesday": "Wednesday, 6:00 to 7:30 PM",
+      "saturday": "Saturday, 8:00 to 10:00 AM",
+      "tuesday": "Tuesday, 8:00 to 9:30 AM / 2:00 to 3:00 PM",
+      "mondayFriday": "Monday to Friday, 9:45 to 11:00 AM / 3:45 to 5:00 PM",
+      "wednesdayThursday": "Wednesday, 2:00 to 3:30 PM / Thursday, 8:00 to 9:30 AM - 2:00 to 3:30 PM"
+    }
+  },
+  "announcementData": {
+    "futureChampion": {
+      "title": "Open Registration - Future Champion Project",
+      "description": "Last spots for the football project that will transform young people into athletes and citizens."
+    },
+    "schoolPartnership": {
+      "title": "New Partnership with Municipal School",
+      "description": "We established a partnership to expand our school tutoring program."
+    },
+    "juninaParty": {
+      "title": "Charity June Party",
+      "description": "Participate in our June party and help raise funds for new projects."
+    }
+  },
+  "improvementData": {
+    "spaceReform": {
+      "title": "Space Renovation",
+      "description": "Progress in the renovation of our community space to better serve the community.",
+      "gallery": {
+        "stage1": "Renovation stage 1",
+        "stage2": "Renovation stage 2",
+        "stage3": "Renovation stage 3"
+      }
+    }
+  },
+  "supporterData": {
+    "companies": {
+      "prefeitura": {
+        "name": "Prefeitura Municipal de Guarabira",
+        "contribution": "Apoio financeiro"
+      },
+      "pm": {
+        "name": "4º Batalhão da Polícia Militar da Paraíba",
+        "contribution": "Parceiro para workshops semanais de música, jiu-jitsu e kickboxing na sede do ANAJÔ I."
+      },
+      "kinderhilfswerk": {
+        "name": "Kinderhilfswerk Anajô",
+        "contribution": "Organização parceira na Áustria que fornece apoio financeiro fundamental para construção de espaços físicos, compra de equipamentos e manutenção de recursos. Também trabalham na conscientização da sociedade europeia e captação de recursos."
+      },
+      "idealCapoeira": {
+        "name": "Ideal Capoeira Europe",
+        "contribution": "Parceiro europeu que apoia a expansão da capoeira e cultura brasileira na Europa."
+      }
+    },
+    "individuals": {
+      "maria": {
+        "name": "Maria Silva",
+        "role": "Doadora Regular",
+        "contribution": "Doação mensal",
+        "testimonial": "Acredito no poder transformador da educação."
+      },
+      "joao": {
+        "name": "João Santos",
+        "role": "Voluntário Senior",
+        "contribution": "Coordenação esportiva",
+        "testimonial": "O esporte mudou minha vida, agora quero mudar a de outros."
+      },
+      "ana": {
+        "name": "Ana Costa",
+        "role": "Mentora",
+        "contribution": "Orientação profissional",
+        "testimonial": "Cada jovem tem potencial único que merece ser desenvolvido."
+      }
+    }
+  },
+  "eventData": {
+    "soccerTournament": {
+      "title": "Torneio de Futebol Comunitário",
+      "description": "Competição entre as equipes formadas pelos nossos projetos esportivos.",
+      "location": "Centro Esportivo Anajô",
+      "category": "Esporte",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?w=800&h=600&fit=crop&crop=center",
+          "alt": "Torneio de Futebol - Jogo Principal",
+          "caption": "Final do torneio com grande público presente"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center",
+          "alt": "Torneio de Futebol - Premiação",
+          "caption": "Cerimônia de premiação dos vencedores"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=600&fit=crop&crop=center",
+          "alt": "Torneio de Futebol - Torcida",
+          "caption": "Famílias e comunidade apoiando os times"
+        }
+      ]
+    },
+    "culturalFair": {
+      "title": "Community Cultural Fair",
+      "description": "Exhibition of artistic and cultural works developed by young people.",
+      "location": "Central Square",
+      "category": "Culture",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop&crop=center",
+          "alt": "Cultural Fair - General View",
+          "caption": "Panoramic view of the cultural fair in the square"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&h=600&fit=crop&crop=center",
+          "alt": "Dance Performance",
+          "caption": "Dance group performing a regional choreography"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+          "alt": "Art Exhibition",
+          "caption": "Artworks created by the participants"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop&crop=center",
+          "alt": "Painting Workshop",
+          "caption": "Children participating in the painting workshop"
+        }
+      ]
+    },
+    "entrepreneurshipWorkshop": {
+      "title": "Entrepreneurship Workshop",
+      "description": "Training for young people interested in developing their own businesses.",
+      "location": "NGO Headquarters",
+      "category": "Education",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&crop=center",
+          "alt": "Entrepreneurship Workshop",
+          "caption": "Speaker presenting business concepts"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop&crop=center",
+          "alt": "Attentive Participants",
+          "caption": "Young people actively participating in the workshop"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop&crop=center",
+          "alt": "Group Dynamics",
+          "caption": "Practical business development activity"
+        }
+      ]
+    },
+    "bookDonationCampaign": {
+      "title": "Book Donation Campaign",
+      "description": "Collection of books to expand our community library.",
+      "location": "Various points in the city",
+      "category": "Social",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop&crop=center",
+          "alt": "Book Donation Campaign",
+          "caption": "Book collection point in the main square"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+          "alt": "Volunteers Organizing",
+          "caption": "Volunteers sorting and cataloging donated books"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop&crop=center",
+          "alt": "Renovated Library",
+          "caption": "New community library with collected books"
+        }
+      ]
+    },
+    "bookDonation": {
+      "title": "Campanha de Doação de Livros",
+      "description": "Arrecadação de livros para ampliar nossa biblioteca comunitária.",
+      "location": "Diversos pontos da cidade",
+      "category": "Social",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop&crop=center",
+          "alt": "Campanha de Doação de Livros",
+          "caption": "Ponto de coleta de livros na praça principal"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+          "alt": "Voluntários organizando",
+          "caption": "Voluntários separando e catalogando livros doados"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop&crop=center",
+          "alt": "Biblioteca renovada",
+          "caption": "Nova biblioteca comunitária com livros arrecadados"
+        }
+      ]
+    }
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "volunteer": "Voluntariado",
+    "donate": "Doar",
+    "contact": "Contato"
+  }
+}

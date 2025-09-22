@@ -1,0 +1,851 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "projects": "Projekte",
+    "volunteer": "Freiwilligenarbeit",
+    "donate": "Spenden",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "slide1": {
+      "alt": "Jiujitsu",
+      "title": "Leben durch Sport transformieren",
+      "subtitle": "Talente und Charakter durch Sportpraxis entwickeln"
+    },
+    "slide2": {
+      "alt": "Capoeira-Kinder",
+      "subtitle": "Mehr als Capoeira: ein Zuhause für Träume, Bildung und Möglichkeiten für unsere Kinder"
+    },
+    "slide3": {
+      "alt": "Jugendliche bei kultureller Aktivität",
+      "title": "Jedes Kind verdient es zu gedeihen",
+      "subtitle": "Wir arbeiten daran sicherzustellen, dass Jungen und Mädchen eine geschützte Kindheit und eine Zukunft voller Möglichkeiten haben."
+    },
+    "slide4": {
+      "alt": "Capoeira-Training",
+      "title": "Vereint durch Sport und Gemeinschaft",
+      "subtitle": "Bindungen stärken und eine bessere Gesellschaft aufbauen"
+    },
+    "description": "Bei der NGO Anajô glauben wir, dass jedes Kind Möglichkeiten verdient zu wachsen, zu lernen und zu träumen. Schließen Sie sich uns bei dieser Mission an, Gemeinschaften zu transformieren.",
+    "donateButton": "Spenden",
+    "volunteerButton": "Freiwilliger werden",
+    "stats": {
+      "children": "Betreute Kinder",
+      "projects": "Aktive Projekte",
+      "years": "Jahre der Wirkung"
+    },
+    "watchVideo": "Unser Video ansehen"
+  },
+  "about": {
+    "title": "Über die Anajô-Vereinigung",
+    "description": "Lernen Sie unsere Geschichte, unser Team und unsere Leidenschaft kennen, Leben durch Sport, Bildung und Kultur zu transformieren.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Für die lokale Entwicklung zu handeln, Unterstützungsmaßnahmen für Kinder, Jugendliche, Familien und Gemeinschaften in sozialer Verwundbarkeit zu stärken und zu qualifizieren."
+    },
+    "objective": {
+      "title": "Hauptziel",
+      "description": "Die gesunde Entwicklung und umfassende Bildung von Kindern und Jugendlichen zu fördern und Bedingungen zu schaffen, um Selbstwertgefühl, Bürgersinn und Freude durch qualifizierte Aktivitäten in sicheren und humanisierten Umgebungen zu erweitern."
+    },
+    "teamMembers": {
+      "hailton": {
+        "name": "Hailton Francisco da Silva",
+        "role": "Gründer der Anajô-Vereinigung"
+      },
+      "joseilda": {
+        "name": "Maria Joseilda Ferreira de Brito",
+        "role": "Koordinatorin und Präsidentin der Anajô-Vereinigung"
+      }
+    },
+    "historyCards": {
+      "foundation": {
+        "title": "Unsere Geschichte und Gründung",
+        "items": {
+          "founding": {
+            "label": "Gründung",
+            "text": "Die Anajô-Vereinigung wurde offiziell am 15. Januar 2007 gegründet."
+          },
+          "founder": {
+            "label": "Gründer",
+            "text": "Gegründet von Hailton da Silva (Meister Hayu), Capoeira-Meister der Gruppe IDEAL CAPOEIRA."
+          },
+          "motivation": {
+            "label": "Motivation",
+            "text": "Entstanden aus der Sensibilität des Gründers, die Armut und Verwundbarkeit von Kindern, Jugendlichen und Familien in der Stadt Guarabira (PB) zu erleben."
+          },
+          "beginning": {
+            "label": "Der Anfang",
+            "text": "Das Projekt begann als sicherer Raum, der durch die Kunst und das kulturelle Erbe der Capoeira angeboten wurde. Die Gruppe Ideal Capoeira Brasil begleitet und sponsert die Initiative seit 2000."
+          },
+          "partnership": {
+            "label": "Internationale Partnerschaft",
+            "text": "Die Vereinigung wurde durch eine brasilianisch-österreichische Partnerschaft gegründet, die zur Schaffung der Organisation \"Kinderhilfswerk Anajô Austria\" in Österreich führte."
+          }
+        }
+      },
+      "mission": {
+        "title": "Mission und Zweck",
+        "items": {
+          "mission": {
+            "label": "Unsere Mission",
+            "text": "Für die lokale Entwicklung zu handeln, Unterstützungsmaßnahmen für Kinder, Jugendliche, Familien und Gemeinschaften in sozialer Verwundbarkeit zu stärken und zu qualifizieren."
+          },
+          "objective": {
+            "label": "Hauptziel",
+            "text": "Die gesunde Entwicklung und umfassende Bildung von Kindern und Jugendlichen zu fördern, Bedingungen zu schaffen, um Selbstwertgefühl, Bürgersinn und Freude durch qualifizierte Aktivitäten in sicheren und humanisierten Umgebungen zu erweitern."
+          },
+          "impact": {
+            "label": "Soziale Auswirkung",
+            "text": "Gegen Kinderarbeit zu kämpfen und die sexuelle Ausbeutung von Kindern und Jugendlichen in der Region zu verhindern, in der der Verein ansässig ist."
+          },
+          "belief": {
+            "label": "Unser Glaube",
+            "text": "Wir glauben, dass alle, Erwachsene und Kinder, kreative Fähigkeiten und Potentiale besitzen. Wir handeln, um ihnen zu helfen, Antworten auf ihre Fragen zu finden und ihr eigenes Wissen zu schätzen."
+          }
+        }
+      },
+      "audience": {
+        "title": "Wen wir bedienen",
+        "items": {
+          "target": {
+            "label": "Zielgruppe",
+            "text": "Wir bedienen insgesamt 140 Kinder und Jugendliche."
+          },
+          "children": {
+            "label": "Kinder",
+            "text": "von 6 bis 13 Jahren."
+          },
+          "teens": {
+            "label": "Jugendliche",
+            "text": "von 14 bis 20 Jahren."
+          },
+          "families": {
+            "label": "Familienprofil",
+            "text": "Das Projekt kommt Kindern von Kleinbauern, Pächtern, Fabrikarbeitern, Hausangestellten und Textilarbeitern, informellen Arbeitern und Arbeitslosen zugute."
+          },
+          "support": {
+            "label": "Familiensupport",
+            "text": "Wir erweitern unseren Service auf Familienmitglieder (Eltern und Geschwister) mit punktueller oder regelmäßiger Unterstützung, bieten Konfliktmediation und fördern respektvollen Dialog."
+          }
+        }
+      },
+      "location": {
+        "title": "Wo wir sind",
+        "items": {
+          "city": {
+            "label": "Stadt",
+            "text": "Guarabira, die neuntbevölkerungsreichste Stadt in Paraíba, 98 km von der Hauptstadt João Pessoa entfernt."
+          },
+          "anajo1": {
+            "label": "ANAJÔ I (Hauptsitz)",
+            "text": "Unser Hauptbildungszentrum befindet sich in den Stadtteilen Nordosten I und II, einer Region mit 20.000 Einwohnern."
+          },
+          "anajo2": {
+            "label": "ANAJÔ II",
+            "text": "Eine Filiale im Stadtteil Rosário (5.000 Einwohner), wo wir zweimal pro Woche Capoeira-, Maculelê- und Schulunterstützungsklassen anbieten."
+          },
+          "anajo3": {
+            "label": "ANAJÔ III",
+            "text": "Eine weitere Filiale im Stadtteil Cordeiro mit Capoeira- und Tanzklassen einmal pro Woche."
+          },
+          "anajo4": {
+            "label": "ANAJÔ IV",
+            "text": "Ein Kern im Stadtteil Mutirão mit Aktivitäten am Samstag."
+          }
+        }
+      },
+      "activities": {
+        "title": "Unsere Aktivitäten",
+        "items": {
+          "proposal": {
+            "label": "Pädagogischer Vorschlag",
+            "text": "Wir bieten kostenlose Workshops in der entgegengesetzten Schicht als Alternative zur Förderung umfassender Bildung, Bürgersinn, sozialer Inklusion und Rechtegarantie."
+          },
+          "education": {
+            "label": "Bildung",
+            "text": "Schulunterstützung und Hausaufgabenhilfe."
+          },
+          "sports": {
+            "label": "Sport und Kampfkünste",
+            "text": "Capoeira, Jiu-Jitsu und Kickboxen."
+          },
+          "culture": {
+            "label": "Kunst und Kultur",
+            "text": "Musikklassen (Gitarre und Blockflöte), Tanz, Maculelê, Theater, Kunst und Handwerk."
+          },
+          "instruments": {
+            "label": "Instrumentenwerkstatt",
+            "text": "Wir ermutigen zur Herstellung eigener Musikinstrumente wie Berimbau, Pandeiro und Atabaque."
+          }
+        }
+      },
+      "partners": {
+        "title": "Unsere Partner",
+        "items": {
+          "city": {
+            "label": "Stadtverwaltung Guarabira",
+            "text": "Unterstützt die Vereinigung seit Mai 2019 mit einem monatlichen Budget."
+          },
+          "police": {
+            "label": "4. Bataillon der Militärpolizei von Paraíba",
+            "text": "Etabliert eine Partnerschaft für wöchentliche Musik-, Jiu-Jitsu- und Kickboxen-Workshops im ANAJÔ I Hauptquartier."
+          },
+          "capoeira": {
+            "label": "Ideal Capoeira Brasil",
+            "text": "Die Capoeira-Gruppe des Gründers unterstützt das Projekt von Anfang an und hilft bei der Projektumsetzung und dem Unterricht in afro-brasilianischer Kultur."
+          },
+          "austria": {
+            "label": "Kinderhilfswerk Anajô Austria und Ideal Capoeira Europa",
+            "text": "Partnerorganisationen in Österreich, die grundlegende finanzielle Unterstützung für den Bau des physischen Raums, den Kauf von Ausrüstung und die Instandhaltung der Ressourcen bieten. Sie arbeiten auch daran, das Bewusstsein in der europäischen Gesellschaft zu schärfen und Spenden zu sammeln."
+          }
+        }
+      }
+    },
+    "visit": {
+      "title": "Besuchen Sie uns!",
+      "address": {
+        "title": "Adresse",
+        "text": "Praça do Encontro - Nordeste II\nGuarabira - PB, 58200-000"
+      },
+      "hours": {
+        "title": "Öffnungszeiten",
+        "text": "Montag bis Freitag: 8-18 Uhr\nSamstags: 8-12 Uhr\nSonntags: Geschlossen"
+      },
+      "capacity": {
+        "title": "Kapazität",
+        "text": "Wir bedienen bis zu 500 Kinder und Jugendliche gleichzeitig"
+      }
+    }
+  },
+  "projects": {
+    "title": "Unsere Projekte",
+    "subtitle": "Entdecken Sie die Initiativen, die unsere Gemeinschaft transformieren",
+    "viewAll": "Alle Projekte anzeigen",
+    "learnMore": "Mehr erfahren"
+  },
+  "volunteer": {
+    "title": "Werden Sie Freiwilliger",
+    "subtitle": "Schließen Sie sich uns an und werden Sie Teil der Transformation",
+    "description": "Werden Sie Freiwilliger und helfen Sie dabei, eine bessere Zukunft für unsere Gemeinschaft aufzubauen.",
+    "joinUs": "Ich möchte Freiwilliger werden",
+    "benefits": {
+      "impact": {
+        "title": "Soziale Auswirkung",
+        "description": "Tragen Sie direkt zur Transformation von Leben und Gemeinschaften durch konkrete und bedeutungsvolle Aktionen bei."
+      },
+      "networking": {
+        "title": "Netzwerken",
+        "description": "Verbinden Sie sich mit Menschen, die die gleichen Werte teilen und bauen Sie ein wertvolles Beziehungsnetzwerk auf."
+      },
+      "development": {
+        "title": "Persönliche Entwicklung",
+        "description": "Entwickeln Sie neue Fähigkeiten, gewinnen Sie Erfahrung und wachsen Sie persönlich und beruflich."
+      },
+      "flexibility": {
+        "title": "Flexibilität",
+        "description": "Wählen Sie, wie und wann Sie beitragen möchten, respektieren Sie Ihre Verfügbarkeit und Ihren Lebensstil."
+      }
+    },
+    "form": {
+      "title": "Freiwilligenregistrierung",
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "age": "Alter",
+      "area": "Interessensbereich",
+      "availability": "Verfügbarkeit",
+      "experience": "Vorherige Erfahrung",
+      "motivation": "Warum möchten Sie Freiwilliger werden?",
+      "submit": "Registrierung absenden",
+      "personalData": "Persönliche Daten",
+      "fullName": "Vollständiger Name",
+      "areasOfInterest": "Interessensbereiche",
+      "selectAreas": "Interessensbereiche auswählen",
+      "whenCanYou": "Wann können Sie helfen?",
+      "selectAvailability": "Wählen Sie Ihre Verfügbarkeit",
+      "previousExperience": "Vorherige Erfahrung",
+      "experiencePlaceholder": "Beschreiben Sie Ihre vorherige Erfahrung (optional)",
+      "whyVolunteer": "Warum möchten Sie Freiwilliger werden?",
+      "motivationPlaceholder": "Erzählen Sie uns Ihre Motivation für das Freiwilligenengagement",
+      "description": "Füllen Sie das untenstehende Formular aus und erzählen Sie uns ein wenig über sich und Ihre Interessen.",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "areas": {
+        "sports": "Sport und Erholung",
+        "education": "Bildung und Schulunterstützung",
+        "culture": "Kultur und Kunst",
+        "technology": "Technologie und Informatik",
+        "administration": "Verwaltung und Management",
+        "events": "Veranstaltungen und Aktivitäten",
+        "fundraising": "Fundraising",
+        "communication": "Kommunikation und Marketing"
+      },
+      "schedules": {
+        "morning": "Morgen (8-12 Uhr)",
+        "afternoon": "Nachmittag (13-17 Uhr)",
+        "evening": "Abend (18-22 Uhr)",
+        "weekends": "Wochenenden",
+        "events": "Besondere Veranstaltungen"
+      }
+    },
+    "whyVolunteer": {
+      "title": "Warum Freiwilliger werden?"
+    },
+    "questions": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Lassen Sie Ihre Fragen zum Freiwilligenengagement bei der Anajô NGO beantworten",
+      "otherContacts": "Andere Kontaktmöglichkeiten"
+    }
+  },
+  "footer": {
+    "mission": "Leben durch Sport, Bildung und Kultur transformieren. Wir glauben an das Potenzial jedes Kindes und Jugendlichen, eine bessere Zukunft aufzubauen.",
+    "quickLinks": "Schnelle Links",
+    "contact": "Kontakt",
+    "followUs": "Folgen Sie uns",
+    "organizationName": "Anajô-Vereinigung",
+    "allRightsReserved": "Alle Rechte vorbehalten",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Wir sind hier, um zu helfen und Ihre Fragen zu beantworten",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "form": {
+      "title": "Nachricht senden",
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Ihr vollständiger Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre@email.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "(83) 99999-9999",
+      "subject": "Betreff",
+      "selectSubject": "Wählen Sie einen Betreff",
+      "message": "Nachricht",
+      "messagePlaceholder": "Geben Sie hier Ihre Nachricht ein...",
+      "subjects": {
+        "volunteer": "Ich möchte Freiwilliger werden",
+        "donation": "Informationen über Spenden",
+        "partnership": "Partnerschaftsvorschlag",
+        "general": "Allgemeine Informationen",
+        "visit": "Besuch vereinbaren",
+        "other": "Andere Themen"
+      },
+      "submit": "Nachricht senden"
+    },
+    "contactInfo": {
+      "address": {
+        "title": "Adresse",
+        "details": [
+          "Praça do Encontro - Nordeste II",
+          "Guarabira - PB, 58200-000"
+        ]
+      },
+      "phone": {
+        "title": "Telefon",
+        "details": [
+          "(83) 98856-7721",
+          "(83) 98856-7721 (WhatsApp)"
+        ]
+      },
+      "email": {
+        "title": "E-Mail",
+        "details": [
+          "hail.capoeira@hotmail.com"
+        ]
+      },
+      "hours": {
+        "title": "Öffnungszeiten",
+        "details": [
+          "Montag bis Freitag: 8-18 Uhr",
+          "Samstags: 8-12 Uhr",
+          "Sonntags: Geschlossen"
+        ]
+      }
+    },
+    "departments": {
+      "general": {
+        "name": "Allgemein",
+        "email": "contato@anajo.org.br"
+      },
+      "projects": {
+        "name": "Projekte",
+        "email": "projetos@anajo.org.br"
+      },
+      "volunteers": {
+        "name": "Freiwillige",
+        "email": "voluntarios@anajo.org.br"
+      },
+      "donations": {
+        "name": "Spenden",
+        "email": "doacoes@anajo.org.br"
+      }
+    },
+    "quickActions": {
+      "title": "Direkte Kontakte",
+      "whatsapp": "WhatsApp",
+      "call": "Jetzt anrufen",
+      "email": "E-Mail senden"
+    },
+    "location": {
+      "title": "Unser Standort",
+      "mapPlaceholder": "📍 Interaktive Karte - Klicken Sie, um in Google Maps anzuzeigen",
+      "description": "Wir befinden uns im Herzen von Guarabira, in einem einladenden und leicht zugänglichen Raum für die gesamte Gemeinschaft.",
+      "mapLink": "In Google Maps öffnen"
+    },
+    "visitUs": {
+      "title": "Besuchen Sie uns!",
+      "description": "Lernen Sie unsere Arbeit aus der Nähe kennen und sehen Sie, wie Sie einen Unterschied im Leben von Kindern und Jugendlichen machen können.",
+      "scheduleVisit": "Besuch vereinbaren",
+      "knowHistory": "Unsere Geschichte kennenlernen"
+    },
+    "info": {
+      "address": {
+        "title": "Adresse",
+        "details": [
+          "Praça do Encontro - Nordeste II",
+          "Guarabira - PB, 58200-000"
+        ]
+      },
+      "phone": {
+        "title": "Telefon",
+        "details": [
+          "(83) 98856-7721",
+          "(83) 98856-7721 (WhatsApp)"
+        ]
+      },
+      "email": {
+        "title": "E-Mail",
+        "details": [
+          "hail.capoeira@hotmail.com"
+        ]
+      },
+      "hours": {
+        "title": "Öffnungszeiten",
+        "details": [
+          "Montag bis Freitag: 8-18 Uhr",
+          "Samstags: 8-12 Uhr",
+          "Sonntags: Geschlossen"
+        ]
+      }
+    }
+  },
+  "donate": {
+    "title": "Spenden Sie",
+    "subtitle": "Ihr Beitrag macht einen Unterschied im Leben vieler Menschen",
+    "description": "Mit Ihrer Spende können wir weiterhin Projekte entwickeln, die Leben transformieren und unsere Gemeinschaft stärken.",
+    "amount": "Spendenbetrag",
+    "monthly": "Monatliche Spende",
+    "oneTime": "Einmalige Spende",
+    "donate": "Jetzt spenden",
+    "security": {
+      "secure": "100% Sicher",
+      "transparent": "Transparent"
+    },
+    "pix": {
+      "title": "Spende via PIX",
+      "description": "Verwenden Sie den QR-Code unten oder kopieren Sie den PIX-Schlüssel, um Ihre Spende schnell und sicher zu tätigen.",
+      "loadingQR": "QR-Code wird geladen...",
+      "scanInstruction": "Scannen Sie den QR-Code mit Ihrer Bank",
+      "keyLabel": "PIX-Schlüssel:",
+      "copyKey": "Schlüssel kopieren",
+      "keyCopied": "Schlüssel kopiert!",
+      "howToDonate": "Wie man spendet:",
+      "step1": "1. Öffnen Sie Ihre Bank-App",
+      "step2": "2. Wählen Sie PIX und scannen Sie den QR-Code",
+      "step3": "3. Bestätigen Sie den Spendenbetrag",
+      "step4": "4. Schließen Sie die Transaktion ab",
+      "qrCodeAlt": "PIX QR-Code für Spende"
+    },
+    "transparency": {
+      "title": "Transparenz",
+      "socialProjects": "Soziale Projekte",
+      "administration": "Verwaltung"
+    },
+    "impact": {
+      "title": "2024 Auswirkung",
+      "childrenServed": "500+ Kinder betreut",
+      "newProjects": "15 neue Projekte",
+      "gradeImprovement": "95% Notenverbesserung",
+      "activeVolunteers": "200 aktive Freiwillige"
+    },
+    "testimonial": {
+      "quote": "Die NGO Anajô hat mein Leben verändert!",
+      "author": "João Silva - Ehemaliger Teilnehmer"
+    },
+    "security": {
+      "notice": "100% sichere Transaktion"
+    }
+  },
+  "mission": {
+    "title": "Wer wir sind",
+    "subtitle": "Die NGO Anajô entstand aus dem Traum, Realitäten durch Sport, Bildung und Kultur zu transformieren. Jedes Projekt ist ein Samen der Hoffnung, der im Herzen der Gemeinschaft gepflanzt wird.",
+    "values": {
+      "mission": {
+        "title": "Unsere Mission",
+        "description": "Für die lokale Entwicklung zu handeln, Unterstützungsmaßnahmen für Kinder, Jugendliche, Familien und Gemeinden in sozialer Verwundbarkeit zu stärken und zu qualifizieren."
+      },
+      "objective": {
+        "title": "Hauptziel",
+        "description": "Die gesunde Entwicklung und umfassende Bildung von Kindern und Jugendlichen zu fördern, Bedingungen zu schaffen, um Selbstwertgefühl, Bürgersinn und Freude durch qualifizierte Aktivitäten in sicheren und humanisierten Umgebungen zu erweitern."
+      },
+      "belief": {
+        "title": "Unser Glaube",
+        "description": "Wir glauben, dass alle, Erwachsene und Kinder, kreative Fähigkeiten und Potentiale besitzen. Wir handeln, um ihnen zu helfen, Antworten auf ihre Fragen zu finden und ihr eigenes Wissen zu schätzen."
+      },
+      "impact": {
+        "title": "Soziale Auswirkung",
+        "description": "Gegen Kinderarbeit zu kämpfen und die sexuelle Ausbeutung von Kindern und Jugendlichen in der Region zu verhindern, in der der Verein ansässig ist."
+      }
+    },
+    "quote": "Jedes Kind, das durch unsere Projekte geht, nimmt nicht nur Wissen mit, sondern auch die Gewissheit, dass ihre Träume möglich und gültig sind."
+  },
+  "projects": {
+    "title": "Unsere Hervorgehobenen Projekte",
+    "subtitle": "Lernen Sie einige der Projekte kennen, die Leben transformieren und eine bessere Zukunft für unsere Gemeinschaft aufbauen.",
+    "participants": "Teilnehmer",
+    "branches": "Filialen",
+    "schedules": "Verschiedene Zeitpläne",
+    "viewAll": "Alle Projekte anzeigen"
+  },
+  "supporters": {
+    "title": "Unsere Unterstützer",
+    "subtitle": "Lernen Sie die Unternehmen und Einzelpersonen kennen, die an unsere Sache glauben und uns helfen, eine bessere Zukunft aufzubauen.",
+    "partner": "Partner",
+    "partnerSince": "Partner seit {{since}}",
+    "companies": {
+      "prefeitura": {
+        "name": "Stadtverwaltung Guarabira",
+        "contribution": "Finanzielle Unterstützung"
+      },
+      "pm": {
+        "name": "4. Bataillon der Militärpolizei von Paraíba",
+        "contribution": "Partnerschaft für wöchentliche Workshops in Musik, Jiu-Jitsu und Kickboxen im Hauptquartier von ANAJÔ I."
+      },
+      "kinder": {
+        "name": "Kinderhilfswerk Anajô",
+        "contribution": "Partnerorganisation in Österreich, die grundlegende finanzielle Unterstützung für den Bau des physischen Raums, den Kauf von Ausrüstung und die Instandhaltung der Ressourcen bietet. Sie arbeiten auch daran, die europäische Gesellschaft zu sensibilisieren und Spenden zu sammeln."
+      },
+      "ideal": {
+        "name": "Ideal Capoeira Europa",
+        "contribution": "Partnerorganisation in Österreich, die grundlegende finanzielle Unterstützung für den Bau des physischen Raums, den Kauf von Ausrüstung und die Instandhaltung der Ressourcen bietet. Sie arbeiten auch daran, die europäische Gesellschaft zu sensibilisieren und Spenden zu sammeln."
+      }
+    },
+    "individuals": {
+      "maria": {
+        "name": "Maria Silva",
+        "role": "Regelmäßige Spenderin",
+        "contribution": "Monatliche Spende",
+        "testimonial": "Ich glaube an die transformative Kraft der Bildung."
+      },
+      "joao": {
+        "name": "João Santos",
+        "role": "Senior-Freiwilliger",
+        "contribution": "Sportkoordination",
+        "testimonial": "Sport hat mein Leben verändert, jetzt möchte ich das Leben anderer verändern."
+      },
+      "ana": {
+        "name": "Ana Costa",
+        "role": "Mentorin",
+        "contribution": "Berufsberatung",
+        "testimonial": "Jeder junge Mensch hat ein einzigartiges Potenzial, das es verdient, entwickelt zu werden."
+      }
+    },
+    "joinFamily": "Werden Sie Teil unserer Familie",
+    "joinDescription": "Seien Sie Teil der Transformation und helfen Sie uns, eine bessere Zukunft für unsere Gemeinschaft aufzubauen.",
+    "becomePartner": "Partner werden",
+    "learnMore": "Mehr erfahren"
+  },
+  "news": {
+    "title": "Projektneuigkeiten",
+    "announcements": "Ankündigungen",
+    "improvements": "Verbesserungen"
+  },
+  "announcements": {
+    "title": "Wichtige Ankündigungen",
+    "subtitle": "Bleiben Sie über die neuesten Nachrichten und Möglichkeiten der Anajô NGO informiert",
+    "urgent": "Dringend",
+    "readMore": "Mehr lesen"
+  },
+  "events": {
+    "title": "Veranstaltungen",
+    "subtitle": "Nehmen Sie an unseren Veranstaltungen teil und werden Sie Teil der Gemeinschaftstransformation",
+    "expectedParticipants": "erwartete Teilnehmer",
+    "viewGallery": "Fotogalerie anzeigen",
+    "photos": "Fotos"
+  },
+  "language": {
+    "select": "Sprache auswählen",
+    "portuguese": "Portugiesisch",
+    "english": "Englisch",
+    "german": "Deutsch"
+  },
+  "projectsPage": {
+    "title": "Unsere Projekte",
+    "description": "Erfahren Sie mehr über alle Projekte, die wir entwickeln, um Leben durch Sport, Bildung und Kultur zu transformieren.",
+    "categories": {
+      "all": "Alle",
+      "sports": "Sport",
+      "education": "Bildung",
+      "culture": "Kultur"
+    },
+    "viewGallery": "Projekt-Fotogalerie anzeigen",
+    "participants": "Teilnehmer",
+    "locations": "Standorte",
+    "cta": {
+      "title": "Möchten Sie teilnehmen?",
+      "description": "Alle unsere Projekte sind kostenlos und offen für die Gemeinschaft. Kontaktieren Sie uns für weitere Informationen zur Anmeldung.",
+      "contact": "Kontaktieren Sie uns",
+      "volunteer": "Freiwilliger werden"
+    },
+    "filterBy": "Filtern nach:",
+    "totalDuration": "Gesamtdauer",
+    "results": "🎯 Erzielt Ergebnisse",
+    "requirements": "📋 Anforderungen",
+    "instructor": "👨‍🏫 Ausbilder"
+  },
+  "projectData": {
+    "capoeira": {
+      "title": "Capoeira-Unterricht",
+      "description": "Capoeira-Unterricht für Kinder und Jugendliche zur Entwicklung motorischer, kognitiver und sozialer Fähigkeiten.",
+      "impact": "Ganzheitliche Entwicklung von mehr als 100 Jugendlichen.",
+      "gallery": {
+        "alt": "Capoeira-Unterricht im Gange",
+        "caption": "Jugendliche lernen Capoeira im Gemeinschaftsraum"
+      }
+    },
+    "football": {
+      "title": "Fußballschule",
+      "description": "Fußballtraining für Kinder und Jugendliche, Entwicklung technischer, taktischer Fähigkeiten und Werte wie Disziplin, Respekt und Teamwork.",
+      "gallery": {
+        "training": "Technisches Training mit Fokus auf Grundlagen",
+        "friendly": "Freundschaftsspiel zwischen Schulmannschaften",
+        "championship": "Teilnahme an regionaler Meisterschaft"
+      }
+    },
+    "music": {
+      "title": "Musikunterricht",
+      "description": "Musik- und Musikinstrumentenunterricht.",
+      "gallery": {
+        "dance": "Volkstanzunterricht",
+        "presentation": "Musikpräsentation bei Gemeinschaftsveranstaltung",
+        "theater": "Theaterprobe"
+      }
+    },
+    "jiujitsu": {
+      "title": "Jiu-Jitsu",
+      "description": "Jiu-Jitsu-Unterricht für Kinder und Jugendliche, Entwicklung motorischer, kognitiver, sozialer Fähigkeiten und Selbstverteidigung.",
+      "gallery": {
+        "training": "Training mit Fokus auf grundlegende Jiu-Jitsu-Techniken",
+        "competition": "Teilnahme an städtischem Wettbewerb",
+        "award": "Meisterschafts-Preisverleihung"
+      }
+    },
+    "tutoring": {
+      "title": "Schulnachhilfe",
+      "description": "Bildungsunterstützung für Kinder mit Lernschwierigkeiten in Mathematik und Portugiesisch, mit spielerischer und personalisierter Methodik.",
+      "duration": "Schuljahr",
+      "instructor": "Bildungsteam",
+      "results": [
+        "80% Verbesserung der Teilnehmernoten",
+        "95% Bestehen des Schuljahres",
+        "100% Steigerung des Selbstvertrauens"
+      ],
+      "requirements": "Kinder im Alter von 6-12 Jahren mit Schulschwierigkeiten",
+      "gallery": {
+        "alt": "Nachhilfeunterricht",
+        "caption": "Schulnachhilfe mit spielerischer Methodik"
+      }
+    },
+    "locations": {
+      "anajo1": "Anajô I - Nordosten",
+      "anajo2": "Anajô II - Rosário",
+      "anajo3": "Anajô III - Cordeiro",
+      "anajo4": "Anajô IV - Mutirão"
+    },
+    "schedules": {
+      "friday": "Freitag, 8:00 bis 9:30 / 14:00 bis 15:30 Uhr",
+      "mondayThursday": "Montag und Donnerstag, 17:30 bis 19:00 Uhr",
+      "wednesday": "Mittwoch, 18:00 bis 19:30 Uhr",
+      "saturday": "Samstag, 8:00 bis 10:00 Uhr",
+      "tuesday": "Dienstag, 8:00 bis 9:30 Uhr / 14:00 bis 15:00 Uhr",
+      "mondayFriday": "Montag bis Freitag, 9:45 bis 11:00 Uhr / 15:45 bis 17:00 Uhr",
+      "wednesdayThursday": "Mittwoch, 14:00 bis 15:30 Uhr / Donnerstag, 8:00 bis 9:30 Uhr - 14:00 bis 15:30 Uhr"
+    }
+  },
+  "announcementData": {
+    "futureChampion": {
+      "title": "Anmeldung offen - Zukunftschampion-Projekt",
+      "description": "Letzte Plätze für das Fußballprojekt, das Jugendliche zu Athleten und Bürgern macht."
+    },
+    "schoolPartnership": {
+      "title": "Neue Partnerschaft mit städtischer Schule",
+      "description": "Wir haben eine Partnerschaft zur Erweiterung unseres Schulnachhilfeprogramms geschlossen."
+    },
+    "juninaParty": {
+        "title": "Wohltätigkeits-Juni-Fest",
+        "description": "Nehmen Sie an unserem Juni-Fest teil und helfen Sie, Spenden für neue Projekte zu sammeln."
+      }
+    },
+    "improvementData": {
+      "spaceReform": {
+        "title": "Raumrenovierung",
+        "description": "Fortschritte bei der Renovierung unseres Gemeinschaftsraums, um der Gemeinschaft besser zu dienen.",
+        "gallery": {
+          "stage1": "Renovierungsphase 1",
+          "stage2": "Renovierungsphase 2",
+          "stage3": "Renovierungsphase 3"
+        }
+      }
+    },
+    "supporterData": {
+      "companies": {
+        "prefeitura": {
+          "name": "Stadtverwaltung Guarabira",
+          "contribution": "Finanzielle Unterstützung"
+        },
+        "pm": {
+          "name": "4. Bataillon der Militärpolizei von Paraíba",
+          "contribution": "Partnerschaft für wöchentliche Workshops in Musik, Jiu-Jitsu und Kickboxen im ANAJÔ I Hauptquartier."
+        },
+        "kinderhilfswerk": {
+          "name": "Kinderhilfswerk Anajô",
+          "contribution": "Partnerorganisation in Österreich, die grundlegende finanzielle Unterstützung für den Bau des physischen Raums, den Kauf von Ausrüstung und die Instandhaltung der Ressourcen bietet. Sie arbeiten auch daran, das Bewusstsein in der europäischen Gesellschaft zu schärfen und Spenden zu sammeln."
+        },
+        "idealCapoeira": {
+          "name": "Ideal Capoeira Europa",
+          "contribution": "Partnerorganisation in Österreich, die grundlegende finanzielle Unterstützung für den Bau des physischen Raums, den Kauf von Ausrüstung und die Instandhaltung der Ressourcen bietet. Sie arbeiten auch daran, das Bewusstsein in der europäischen Gesellschaft zu schärfen und Spenden zu sammeln."
+        }
+      },
+      "individuals": {
+        "maria": {
+          "name": "Maria Silva",
+          "role": "Regelmäßige Spenderin",
+          "contribution": "Monatliche Spende",
+          "testimonial": "Ich glaube an die transformative Kraft der Bildung."
+        },
+        "joao": {
+          "name": "João Santos",
+          "role": "Senior-Freiwilliger",
+          "contribution": "Sportkoordination",
+          "testimonial": "Sport hat mein Leben verändert, jetzt möchte ich das Leben anderer verändern."
+        },
+        "ana": {
+          "name": "Ana Costa",
+          "role": "Mentorin",
+          "contribution": "Berufsberatung",
+          "testimonial": "Jeder junge Mensch hat ein einzigartiges Potenzial, das es verdient, entwickelt zu werden."
+        }
+      }
+    },
+    "eventData": {
+      "soccerTournament": {
+        "title": "Gemeinschafts-Fußballturnier",
+        "description": "Wettbewerb zwischen den Teams unserer Sportprojekte.",
+        "location": "Anajô Sportzentrum",
+        "category": "Sport",
+        "gallery": [
+          {
+            "src": "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?w=800&h=600&fit=crop&crop=center",
+            "alt": "Fußballturnier - Hauptspiel",
+            "caption": "Turnierfinale mit großem Publikum"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=800&h=600&fit=crop&crop=center",
+            "alt": "Teilnehmende Mannschaften",
+            "caption": "Alle am Turnier teilnehmenden Mannschaften"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center",
+            "alt": "Siegerehrung des Turniers",
+            "caption": "Siegerehrung der Gewinner"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&h=600&fit=crop&crop=center",
+            "alt": "Begeisterte Zuschauer",
+            "caption": "Die Gemeinschaft unterstützt ihre Lieblingsteams"
+          }
+        ]
+      },
+      "culturalFair": {
+        "title": "Kulturmesse der Gemeinschaft",
+        "description": "Ausstellung der von den Jugendlichen entwickelten künstlerischen und kulturellen Arbeiten.",
+        "location": "Zentralplatz",
+        "category": "Kultur",
+        "gallery": [
+          {
+            "src": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop&crop=center",
+            "alt": "Kulturmesse - Gesamtansicht",
+            "caption": "Panoramablick auf die Kulturmesse auf dem Platz"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&h=600&fit=crop&crop=center",
+            "alt": "Tanzvorführung",
+            "caption": "Tanzgruppe führt eine regionale Choreografie auf"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+            "alt": "Kunstausstellung",
+            "caption": "Von den Teilnehmern geschaffene Kunstwerke"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop&crop=center",
+            "alt": "Malwerkstatt",
+            "caption": "Kinder nehmen an der Malwerkstatt teil"
+          }
+        ]
+      },
+      "entrepreneurshipWorkshop": {
+        "title": "Workshop für Unternehmertum",
+        "description": "Schulung für junge Menschen, die daran interessiert sind, ihr eigenes Unternehmen zu gründen.",
+        "location": "Sitz der NGO",
+        "category": "Bildung",
+        "gallery": [
+          {
+            "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&crop=center",
+            "alt": "Workshop für Unternehmertum",
+            "caption": "Referent präsentiert Geschäftskonzepte"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop&crop=center",
+            "alt": "Aufmerksame Teilnehmer",
+            "caption": "Junge Menschen nehmen aktiv am Workshop teil"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop&crop=center",
+            "alt": "Gruppendynamik",
+            "caption": "Praktische Aktivität zur Geschäftsentwicklung"
+          }
+        ]
+      },
+      "bookDonationCampaign": {
+        "title": "Buchspendenaktion",
+        "description": "Sammlung von Büchern zur Erweiterung unserer Gemeinschaftsbibliothek.",
+        "location": "Verschiedene Orte in der Stadt",
+        "category": "Soziales",
+        "gallery": [
+          {
+            "src": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop&crop=center",
+            "alt": "Buchspendenaktion",
+            "caption": "Buchsammelstelle auf dem Hauptplatz"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+            "alt": "Freiwillige beim Organisieren",
+            "caption": "Freiwillige sortieren und katalogisieren gespendete Bücher"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop&crop=center",
+            "alt": "Renovierte Bibliothek",
+            "caption": "Neue Gemeinschaftsbibliothek mit gesammelten Büchern"
+          }
+        ]
+      }
+    }
+  }
