@@ -120,12 +120,18 @@
                             <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                                 <i data-lucide="mail" class="w-6 h-6 text-white"></i>
                             </div>
-                            <div>
+                            <div class="flex-1">
                                 <p class="text-sm text-gray-600">E-mail</p>
-                                <button onclick="openEmail()" class="text-green-600 font-semibold hover:underline flex items-center">
-                                    hail.capoeira@hotmail.com
-                                    <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
-                                </button>
+                                <div class="space-y-1">
+                                    <button onclick="openEmail('hail.capoeira@hotmail.com')" class="text-green-600 font-semibold hover:underline flex items-center block w-full text-left">
+                                        hail.capoeira@hotmail.com
+                                        <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                                    </button>
+                                    <button onclick="openEmail('anajogba@yahoo.com.br')" class="text-green-600 font-semibold hover:underline flex items-center block w-full text-left">
+                                        anajogba@yahoo.com.br
+                                        <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -215,8 +221,8 @@
             window.open('https://wa.me/5583885677721', '_blank');
         }
 
-        function openEmail() {
-            window.location.href = 'mailto:hail.capoeira@hotmail.com';
+        function openEmail(email) {
+            window.location.href = 'mailto:' + email;
         }
 
         function openSocial(url) {

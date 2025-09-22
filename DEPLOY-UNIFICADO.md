@@ -163,7 +163,7 @@ server {
 ```bash
 npm run dev
 # Acesse: https://localhost:3000/
-# Cartão: https://localhost:3000/cartao-standalone.html
+# Cartão: use a rota React https://localhost:3000/cartao (standalone removido)
 ```
 
 ### 2. Preview do Build

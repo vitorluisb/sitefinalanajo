@@ -35,10 +35,12 @@
     "volunteerButton": "Voluntariar",
     "watchVideo": "Assista nosso vídeo",
     "stats": {
-      "children": "500+ crianças atendidas",
-      "projects": "15 novos projetos",
-      "improvement": "95% melhoria nas notas",
-      "volunteers": "200 voluntários ativos"
+      "children": "crianças atendidas",
+      "childrenNumber": "140",
+      "projects": "projetos ativos",
+      "projectsNumber": "15",
+      "years": "anos de experiência",
+      "yearsNumber": "8"
     }
   },
   "about": {
@@ -89,7 +91,7 @@
       },
       "capacity": {
         "title": "Capacidade",
-        "text": "Atendemos até 500 crianças\ne jovens simultaneamente"
+        "text": "Atendemos até 140 crianças\ne jovens simultaneamente"
       }
     },
     "teamMembers": {
@@ -162,7 +164,7 @@
           },
           "teens": {
             "label": "Adolescentes",
-            "text": "de 14 a 20 anos."
+            "text": "de 14 a 17 anos."
           },
           "families": {
             "label": "Perfil das Famílias",
@@ -195,7 +197,7 @@
           },
           "anajo4": {
             "label": "ANAJÔ IIII",
-            "text": "Um núcleo no bairro do Mutirão, com atividades aos sábados."
+            "text": "Um núcleo no bairro do Mutirão, com aulas de Capoeira Ukulele e com atividades aos sábados."
           }
         }
       },
@@ -505,6 +507,8 @@
     "subtitle": "Conheça as empresas e pessoas que acreditam na nossa causa e nos ajudam a construir um futuro melhor.",
     "partner": "Parceiro",
     "partnerSince": "Parceiro desde {{since}}",
+    "companiesTitle": "Empresas Parceiras",
+    "individualsTitle": "Apoiadores Individuais",
     "companies": {
       "prefeitura": {
         "name": "Prefeitura de Guarabira",
@@ -727,7 +731,8 @@
       "email": {
         "title": "Email",
         "details": [
-        "hail.capoeira@hotmail.com"
+          "hail.capoeira@hotmail.com",
+          "anajogba@yahoo.com.br"
         ]
       },
       "hours": {
@@ -833,7 +838,7 @@
       "description": "Use o QR Code abaixo ou copie a chave PIX para fazer sua doação de forma rápida e segura.",
       "loadingQR": "Carregando QR Code...",
       "scanInstruction": "Escaneie o QR Code com seu banco",
-      "keyLabel": "Chave PIX:",
+      "keyLabel": "Chave PIX (CNPJ):",
       "copyKey": "Copiar Chave",
       "keyCopied": "Chave copiada!",
       "howToDonate": "Como doar:",
@@ -843,24 +848,30 @@
       "step4": "4. Finalize a transação",
       "qrCodeAlt": "QR Code PIX para doação"
     },
+    "bankDeposit": {
+      "title": "Depósito Bancário",
+      "description": "Faça um depósito direto em nossa conta corrente",
+      "accountInfo": "Dados da Conta",
+      "bank": "Banco",
+      "agency": "Agência",
+      "account": "Conta Corrente",
+      "instructions": "Como doar:",
+      "step1": "1. Acesse sua conta no Bradesco",
+      "step2": "2. Vá em Transferências > Depósito",
+      "step3": "3. Use os dados da conta acima",
+      "step4": "4. Confirme a transação",
+      "copyData": "Copiar Dados",
+      "dataCopied": "Dados copiados!"
+    },
     "transparency": {
       "title": "Transparência",
       "socialProjects": "Projetos sociais",
       "administration": "Administração"
     },
     "impact": {
-      "title": "Impacto 2024",
-      "childrenServed": "500+ crianças atendidas",
-      "newProjects": "15 novos projetos",
-      "gradeImprovement": "95% melhoria nas notas",
-      "activeVolunteers": "200 voluntários ativos"
-    },
-    "testimonial": {
-      "quote": "A ONG Anajô mudou minha vida!",
-      "author": "João Silva - Ex-participante"
-    },
-    "security": {
-      "notice": "Transação 100% segura"
+      "title": "Impacto 2025",
+      "childrenServed": "140 crianças atendidas",
+      "gradeImprovement": "Melhoria significativa nas notas"
     },
     "faq": {
       "title": "Perguntas Frequentes",

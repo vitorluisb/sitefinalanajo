@@ -30,7 +30,7 @@ http://www.cartao-anajo.netlify.app/* https://cartao-anajo.netlify.app/:splat 30
     // Arquivo: netlify.toml (criar na raiz do projeto)
     toml: `
 [build]
-  publish = "dist-cartao"
+  publish = "dist"
   
 [[headers]]
   for = "/*"
@@ -57,14 +57,14 @@ http://www.cartao-anajo.netlify.app/* https://cartao-anajo.netlify.app/:splat 30
   "version": 2,
   "builds": [
     {
-      "src": "dist-cartao/**/*",
+      "src": "dist/**/*",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist-cartao/$1"
+      "dest": "/dist/$1"
     }
   ],
   "headers": [
@@ -94,13 +94,7 @@ http://www.cartao-anajo.netlify.app/* https://cartao-anajo.netlify.app/:splat 30
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "http://cartao-anajo.vercel.app/(.*)",
-      "destination": "https://cartao-anajo.vercel.app/$1",
-      "permanent": true
-    }
-  ]
+  "redirects": []
 }
 `
   },

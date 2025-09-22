@@ -173,9 +173,9 @@ export const projects: Project[] = [
     duration: 'Ano letivo',
     instructor: 'Equipe Pedagógica',
     results: [
-      '80% melhoria nas notas dos participantes',
-      '95% aprovação no ano letivo',
-      '100% aumento na autoconfiança'
+      'Melhoria significativa nas notas dos participantes',
+      'Alta aprovação no ano letivo',
+      'Aumento na autoconfiança das crianças'
     ],
     requirements: 'Crianças de 6-12 anos com dificuldades escolares',
     gallery: [

@@ -10,7 +10,7 @@ const Doar = () => {
   const [copied, setCopied] = useState(false);
   const [qrCodeDataURL, setQrCodeDataURL] = useState('');
 
-  const pixKey = 'hail.capoeira@hotmail.com';
+  const pixKey = '08594979000185';
 
   useEffect(() => {
     // Função CRC16 CCITT personalizada
@@ -171,6 +171,55 @@ const Doar = () => {
                       <span className="text-green-700 font-medium">{t('donate.security.notice')}</span>
                     </div>
                   </div>
+
+                  {/* Bank Deposit Section */}
+                  <div className="mt-8">
+                    <h2 className="text-2xl font-bold text-foreground mb-6 text-center">{t('donate.bankDeposit.title')}</h2>
+                    <p className="text-center text-muted-foreground mb-6">{t('donate.bankDeposit.description')}</p>
+                    
+                    <div className="bg-white p-6 rounded-xl border-2 border-primary/20 shadow-lg">
+                      <h3 className="text-lg font-semibold text-foreground mb-4 text-center">{t('donate.bankDeposit.accountInfo')}</h3>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                          <div className="text-sm text-muted-foreground mb-1">{t('donate.bankDeposit.bank')}</div>
+                          <div className="font-bold text-blue-800">Bradesco</div>
+                        </div>
+                        <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
+                          <div className="text-sm text-muted-foreground mb-1">{t('donate.bankDeposit.agency')}</div>
+                          <div className="font-bold text-green-800">2007</div>
+                        </div>
+                        <div className="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
+                          <div className="text-sm text-muted-foreground mb-1">{t('donate.bankDeposit.account')}</div>
+                          <div className="font-bold text-purple-800">22568-1</div>
+                        </div>
+                      </div>
+
+                      <div className="text-center">
+                        <button
+                          onClick={() => {
+                            const bankData = `Banco: Bradesco\nAgência: 2007\nConta Corrente: 22568-1`;
+                            navigator.clipboard.writeText(bankData);
+                            setCopied(true);
+                            setTimeout(() => setCopied(false), 2000);
+                          }}
+                          className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
+                        >
+                          <span>{copied ? t('donate.bankDeposit.dataCopied') : t('donate.bankDeposit.copyData')}</span>
+                        </button>
+                      </div>
+
+                      <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                        <p className="mb-3 font-medium text-blue-800">{t('donate.bankDeposit.instructions')}</p>
+                        <div className="space-y-1 text-sm text-muted-foreground">
+                          <div>{t('donate.bankDeposit.step1')}</div>
+                          <div>{t('donate.bankDeposit.step2')}</div>
+                          <div>{t('donate.bankDeposit.step3')}</div>
+                          <div>{t('donate.bankDeposit.step4')}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Coluna Lateral - Info Compacta */}
@@ -203,29 +252,11 @@ const Doar = () => {
                           ✅ {t('donate.impact.childrenServed')}
                         </div>
                         <div className="text-xs text-muted-foreground">
-                          ✅ {t('donate.impact.newProjects')}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
                           ✅ {t('donate.impact.gradeImprovement')}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          ✅ {t('donate.impact.activeVolunteers')}
                         </div>
                       </div>
                     </div>
 
-                    {/* Testimonial - Compacto */}
-                    <div className="card-elegant">
-                      <div className="text-center">
-                        <div className="text-2xl mb-2">💬</div>
-                        <blockquote className="text-sm text-foreground italic mb-3">
-                          "{t('donate.testimonial.quote')}"
-                        </blockquote>
-                        <div className="text-xs text-muted-foreground">
-                          {t('donate.testimonial.author')}
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

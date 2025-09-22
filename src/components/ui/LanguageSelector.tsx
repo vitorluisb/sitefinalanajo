@@ -30,17 +30,17 @@ const languages: Language[] = [
   {
     code: 'pt-BR',
     name: 'Português',
-    flag: <BrazilFlag size={20} className="rounded-sm" />
+    flag: <BrazilFlag size={24} className="rounded-sm" />
   },
   {
     code: 'en',
     name: 'English',
-    flag: <EnglandFlag size={20} className="rounded-sm" />
+    flag: <EnglandFlag size={24} className="rounded-sm" />
   },
   {
     code: 'de',
     name: 'Deutsch',
-    flag: <GermanFlag size={20} className="rounded-sm" />
+    flag: <GermanFlag size={24} className="rounded-sm" />
   }
 ];
 
@@ -59,12 +59,12 @@ const LanguageSelector: React.FC = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-1 xl:space-x-2 px-2 xl:px-3 py-1.5 xl:py-2 rounded-lg bg-black/20 hover:bg-black/30 transition-colors duration-200 text-white border border-white/30 backdrop-blur-sm"
+        className="flex items-center space-x-2 xl:space-x-2 px-4 py-3 xl:px-3 xl:py-2 rounded-xl bg-gradient-to-r from-black/25 to-black/15 hover:from-black/35 hover:to-black/25 transition-all duration-300 text-white border border-white/40 backdrop-blur-md min-h-[48px] xl:min-h-0 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
         aria-label={t('language.select')}
       >
-        <Globe size={16} className="text-white xl:w-[18px] xl:h-[18px]" />
-        <div className="scale-75 xl:scale-100">{currentLanguage.flag}</div>
-        <span className="text-xs xl:text-sm font-semibold text-white drop-shadow-lg hidden sm:inline">{currentLanguage.name}</span>
+        <Globe size={20} className="text-white xl:w-[18px] xl:h-[18px] drop-shadow-md" />
+        <div className="scale-100 xl:scale-100">{currentLanguage.flag}</div>
+        <span className="text-sm xl:text-sm font-semibold text-white drop-shadow-lg hidden sm:inline">{currentLanguage.name}</span>
       </button>
 
       {isOpen && (
@@ -73,19 +73,19 @@ const LanguageSelector: React.FC = () => {
             className="fixed inset-0 z-40" 
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+          <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
             <div className="py-2">
               {languages.map((language) => (
                 <button
                   key={language.code}
                   onClick={() => handleLanguageChange(language.code)}
-                  className={`w-full flex items-center space-x-3 px-4 py-2 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                  className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-blue-50 transition-all duration-200 rounded-lg mx-2 ${
                     currentLanguage.code === language.code 
-                      ? 'bg-blue-50 text-blue-600' 
-                      : 'text-gray-700'
+                      ? 'bg-blue-100 text-blue-700 font-semibold' 
+                      : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
-                  {language.flag}
+                  <div className="scale-110">{language.flag}</div>
                   <span className="font-medium">{language.name}</span>
                   {currentLanguage.code === language.code && (
                     <span className="ml-auto text-blue-600">✓</span>

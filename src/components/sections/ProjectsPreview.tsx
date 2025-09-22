@@ -78,15 +78,17 @@ const ProjectsPreview = () => {
                 </div>
 
                 {/* Impact */}
-                <div className={`p-4 rounded-lg ${
-                  project.category === t('projectsPage.categories.education') ? 'accent-yellow' : 
-                  project.category === t('projectsPage.categories.culture') ? 'accent-green' : 
-                  'bg-primary-soft'
-                }`}>
-                  <p className="text-sm font-medium text-primary">
-                    {project.impact}
-                  </p>
-                </div>
+                {project.impact && project.impact.trim().length > 0 && (
+                  <div className={`p-4 rounded-lg ${
+                    project.category === t('projectsPage.categories.education') ? 'accent-yellow' : 
+                    project.category === t('projectsPage.categories.culture') ? 'accent-green' : 
+                    'bg-primary-soft'
+                  }`}>
+                    <p className="text-sm font-medium text-primary">
+                      {project.impact}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           ))}

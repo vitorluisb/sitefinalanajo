@@ -6,19 +6,14 @@ Este guia explica como fazer deploy do cartão de visita digital da Anajô com H
 
 ## 🚀 Build para Produção
 
-### 1. Gerar Build com HTTPS
+### 1. Gerar Build
 ```bash
-# Executar o build com configurações HTTPS
-node build-cartao.cjs
+# Executar o build do site (inclui /cartao)
+npm run build
 ```
 
 ### 2. Arquivos Gerados
-Após o build, a pasta `dist-cartao/` conterá:
-- `index.html` - Página principal com meta tags de segurança
-- `logoanajo.png` - Logo da empresa
-- `profile-placeholder.svg` - Avatar placeholder
-- `.htaccess` - Configurações para Apache
-- `_redirects` - Configurações para Netlify
+Após o build, a pasta `dist/` conterá os arquivos do site (inclui a rota `/cartao`).
 
 ## 🌐 Provedores de Hospedagem
 
@@ -27,14 +22,13 @@ Após o build, a pasta `dist-cartao/` conterá:
 #### Deploy Automático
 1. Conecte seu repositório GitHub ao Netlify
 2. Configure as seguintes opções:
-   - **Build command**: `node build-cartao.cjs`
-   - **Publish directory**: `dist-cartao`
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
    - **Branch**: `main`
 
 #### Deploy Manual
-1. Execute `node build-cartao.cjs`
-2. Faça upload da pasta `dist-cartao/` no Netlify
-3. O arquivo `_redirects` configurará automaticamente o HTTPS
+1. Execute `npm run build`
+2. Faça upload da pasta `dist/` no Netlify
 
 #### Domínio Personalizado
 ```
@@ -52,21 +46,21 @@ Após o build, a pasta `dist-cartao/` conterá:
 npm i -g vercel
 
 # Build e deploy
-node build-cartao.cjs
-cd dist-cartao
+npm run build
+cd dist
 vercel --prod
 ```
 
 #### Configuração vercel.json
-Crie `vercel.json` na raiz do projeto:
+Crie `vercel.json` na raiz do projeto (opcional):
 ```json
 {
-  "buildCommand": "node build-cartao.cjs",
-  "outputDirectory": "dist-cartao",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://cartao.anajo.org.br/$1",
+      "destination": "/$1",
       "permanent": true
     }
   ],
@@ -118,14 +112,13 @@ jobs:
         node-version: '16'
     
     - name: Build
-      run: node build-cartao.cjs
+      run: npm run build
     
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist-cartao
-        custom_domain: cartao.anajo.org.br
+        publish_dir: ./dist
 ```
 
 #### HTTPS no GitHub Pages
@@ -136,7 +129,7 @@ jobs:
 
 #### Upload de Arquivos
 1. Execute `node build-cartao.cjs`
-2. Faça upload da pasta `dist-cartao/` para o servidor
+2. Faça upload da pasta `dist/` para o servidor
 3. O arquivo `.htaccess` configurará automaticamente:
    - Redirecionamento HTTP → HTTPS
    - Headers de segurança

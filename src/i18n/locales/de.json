@@ -32,8 +32,11 @@
     "volunteerButton": "Freiwilliger werden",
     "stats": {
       "children": "Betreute Kinder",
+      "childrenNumber": "140",
       "projects": "Aktive Projekte",
-      "years": "Jahre der Wirkung"
+      "projectsNumber": "15",
+      "years": "Jahre der Wirkung",
+      "yearsNumber": "8"
     },
     "watchVideo": "Unser Video ansehen"
   },
@@ -214,7 +217,7 @@
       },
       "capacity": {
         "title": "Kapazität",
-        "text": "Wir bedienen bis zu 500 Kinder und Jugendliche gleichzeitig"
+        "text": "Wir bedienen bis zu 140 Kinder und Jugendliche gleichzeitig"
       }
     }
   },
@@ -357,7 +360,8 @@
       "email": {
         "title": "E-Mail",
         "details": [
-          "hail.capoeira@hotmail.com"
+          "hail.capoeira@hotmail.com",
+          "anajogba@yahoo.com.br"
         ]
       },
       "hours": {
@@ -453,7 +457,7 @@
       "description": "Verwenden Sie den QR-Code unten oder kopieren Sie den PIX-Schlüssel, um Ihre Spende schnell und sicher zu tätigen.",
       "loadingQR": "QR-Code wird geladen...",
       "scanInstruction": "Scannen Sie den QR-Code mit Ihrer Bank",
-      "keyLabel": "PIX-Schlüssel:",
+      "keyLabel": "PIX-Schlüssel (CNPJ):",
       "copyKey": "Schlüssel kopieren",
       "keyCopied": "Schlüssel kopiert!",
       "howToDonate": "Wie man spendet:",
@@ -469,15 +473,11 @@
       "administration": "Verwaltung"
     },
     "impact": {
-      "title": "2024 Auswirkung",
-      "childrenServed": "500+ Kinder betreut",
-      "newProjects": "15 neue Projekte",
-      "gradeImprovement": "95% Notenverbesserung",
+      "title": "2025 Auswirkung",
+      "childrenServed": "140 Kinder betreut",
+      "newProjects": "15 neue Projekte umgesetzt",
+      "gradeImprovement": "Deutliche Verbesserung der Noten",
       "activeVolunteers": "200 aktive Freiwillige"
-    },
-    "testimonial": {
-      "quote": "Die NGO Anajô hat mein Leben verändert!",
-      "author": "João Silva - Ehemaliger Teilnehmer"
     },
     "security": {
       "notice": "100% sichere Transaktion"
@@ -653,9 +653,9 @@
       "duration": "Schuljahr",
       "instructor": "Bildungsteam",
       "results": [
-        "80% Verbesserung der Teilnehmernoten",
-        "95% Bestehen des Schuljahres",
-        "100% Steigerung des Selbstvertrauens"
+        "Deutliche Verbesserung der Teilnehmernoten",
+        "Hohe Bestehensrate im Schuljahr",
+        "Gesteigertes Selbstvertrauen der Kinder"
       ],
       "requirements": "Kinder im Alter von 6-12 Jahren mit Schulschwierigkeiten",
       "gallery": {

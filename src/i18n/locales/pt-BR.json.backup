@@ -166,8 +166,7 @@
   },
   "news": {
     "title": "Notícias dos Projetos",
-    "announcements": "Anúncios",
-    "improvements": "Melhorias"
+    "announcements": "Anúncios"
   },
   "announcements": {
     "title": "Anúncios Importantes",
@@ -551,9 +550,7 @@
       "title": "🎯 Impacto 2024",
       "stats": [
         "✅ 500+ crianças atendidas",
-        "✅ 15 novos projetos",
-        "✅ 95% melhoria nas notas",
-        "✅ 200 voluntários ativos"
+        "✅ 95% melhoria nas notas"
       ]
     },
     "testimonial": {

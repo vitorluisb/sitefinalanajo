@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
+import QRCode from 'qrcode';
 import { Download, Phone, Mail, MapPin, ExternalLink, Heart, QrCode, Sparkles, Users, Globe, MessageCircle, Instagram, Facebook, Share2, Star } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useTranslation } from 'react-i18next';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -8,6 +10,8 @@ import CartaoLayout from '@/components/layout/CartaoLayout';
 const CartaoVisita = () => {
   const { t } = useTranslation();
   const [isDownloading, setIsDownloading] = useState(false);
+  const [isQrOpen, setIsQrOpen] = useState(false);
+  const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
   // Dados do cartão de visita
@@ -17,13 +21,13 @@ const CartaoVisita = () => {
     organization: 'ONG - Desenvolvimento Social e Cultural',
     area: '',
     phone: '+55 83 8856-7721',
-    email: 'hail.capoeira@hotmail.com',
+    emails: ['hail.capoeira@hotmail.com', 'anajogba@yahoo.com.br'],
     address: 'Parque do Encontro - Nordeste, Guarabira - PB, 58200-000',
     bio: '',
     social: {
       instagram: 'https://www.instagram.com/associacaoanajo/',
       facebook: 'https://facebook.com/anajo.ong',
-      website: 'https://anajo.org.br',
+      website: 'https://anajo.site',
       whatsapp: 'https://wa.me/5583885677721'
     }
   };
@@ -81,7 +85,7 @@ const CartaoVisita = () => {
   };
 
   const handleEmail = () => {
-    window.location.href = `mailto:${cardData.email}`;
+    window.location.href = `mailto:${cardData.emails[0]}`;
   };
 
   const handlePhone = () => {
@@ -96,166 +100,27 @@ const CartaoVisita = () => {
     window.open(url, '_blank');
   };
 
-  const handleShowQRCode = () => {
-    // Criar QR Code com informações do cartão
-    const qrData = `BEGIN:VCARD
-VERSION:3.0
-FN:Associação Anajô
-ORG:Associação Anajô
-TITLE:Desenvolvimento Social e Educação
-TEL:+5583885677721
-EMAIL:hail.capoeira@hotmail.com
-URL:https://anajo.org.br
-ADR:;;Parque do Encontro - Nordeste;Guarabira;PB;58200-000;Brasil
-END:VCARD`;
-    
-    // Abrir QR Code em nova janela
-    const qrWindow = window.open('', '_blank', 'width=450,height=500');
-    if (!qrWindow) {
-      alert('Por favor, permita pop-ups para visualizar o QR Code');
-      return;
-    }
-    
-    qrWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <title>QR Code - Associação Anajô</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-        <style>
-          body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
-            text-align: center; 
-            padding: 20px; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .qr-container { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            display: inline-block;
-            backdrop-filter: blur(10px);
-            max-width: 90vw;
-          }
-          h1 { 
-            color: #2563eb; 
-            margin-bottom: 20px; 
-            font-weight: 700;
-            font-size: 24px;
-          }
-          #qrcode { 
-            margin: 20px 0; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 200px;
-          }
-          .loading {
-            color: #666;
-            font-size: 16px;
-          }
-          p { 
-            color: #666; 
-            font-size: 14px; 
-            margin-top: 15px;
-          }
-          .error {
-            color: #dc2626;
-            font-size: 14px;
-            margin-top: 10px;
-          }
-          canvas {
-            border-radius: 8px;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="qr-container">
-          <h1>🎯 Associação Anajô</h1>
-          <div id="qrcode">
-            <div class="loading">Gerando QR Code...</div>
-          </div>
-          <p>📱 Escaneie para salvar o contato</p>
-          <div id="error-message" class="error" style="display: none;"></div>
-        </div>
-        <script>
-          function generateQRCode() {
-            try {
-              if (typeof QRCode === 'undefined') {
-                throw new Error('Biblioteca QRCode não carregou');
-              }
-              
-              const qrContainer = document.getElementById('qrcode');
-              qrContainer.innerHTML = '';
-              
-              QRCode.toCanvas(qrContainer, \`${qrData}\`, {
-                width: 200,
-                margin: 2,
-                color: {
-                  dark: '#2563eb',
-                  light: '#ffffff'
-                },
-                errorCorrectionLevel: 'M'
-              }, function (error) {
-                if (error) {
-                  console.error('Erro ao gerar QR Code:', error);
-                  document.getElementById('error-message').style.display = 'block';
-                  document.getElementById('error-message').textContent = 'Erro ao gerar QR Code. Tente novamente.';
-                  qrContainer.innerHTML = '<div class="error">❌ Erro ao gerar QR Code</div>';
-                } else {
-                  console.log('QR Code gerado com sucesso!');
-                }
-              });
-            } catch (error) {
-              console.error('Erro:', error);
-              document.getElementById('qrcode').innerHTML = '<div class="error">❌ Erro ao carregar biblioteca</div>';
-              document.getElementById('error-message').style.display = 'block';
-              document.getElementById('error-message').textContent = 'Erro ao carregar a biblioteca do QR Code.';
-            }
-          }
-          
-          // Tentar gerar o QR Code quando a página carregar
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-              setTimeout(generateQRCode, 100);
-            });
-          } else {
-            setTimeout(generateQRCode, 100);
-          }
-          
-          // Fallback: tentar novamente após 2 segundos se não funcionou
-          setTimeout(function() {
-            const qrContainer = document.getElementById('qrcode');
-            if (qrContainer && qrContainer.innerHTML.includes('Gerando QR Code')) {
-              generateQRCode();
-            }
-          }, 2000);
-        </script>
-      </body>
-      </html>
-    `);
-    
-    // Fechar a janela automaticamente se houver erro crítico
-    setTimeout(() => {
-      if (qrWindow && !qrWindow.closed) {
-        try {
-          const qrContainer = qrWindow.document.getElementById('qrcode');
-          if (qrContainer && qrContainer.innerHTML.includes('Gerando QR Code')) {
-            qrWindow.document.getElementById('qrcode').innerHTML = '<div class="error">❌ Timeout - Tente novamente</div>';
-          }
-        } catch (e) {
-          console.log('Janela QR Code fechada ou inacessível');
+  const handleShowQRCode = async () => {
+    // Gerar QR Code com link compartilhável do cartão
+    const shareUrl = 'https://anajo.site/cartao'
+    const qrData = shareUrl
+
+    try {
+      const dataUrl = await QRCode.toDataURL(qrData, {
+        width: 240,
+        margin: 2,
+        errorCorrectionLevel: 'M',
+        color: {
+          dark: '#2563eb',
+          light: '#ffffff'
         }
-      }
-    }, 5000);
+      });
+      setQrDataUrl(dataUrl);
+      setIsQrOpen(true);
+    } catch (error) {
+      console.error('Erro ao gerar QR Code:', error);
+      alert('Erro ao gerar QR Code. Tente novamente.');
+    }
   };
 
   return (
@@ -332,13 +197,18 @@ END:VCARD`;
                       </div>
                       <div className="flex-1">
                         <p className="text-sm text-blue-600 font-semibold mb-2 uppercase tracking-wide">E-mail</p>
-                        <button 
-                          onClick={handleEmail}
-                          className="text-blue-800 font-semibold hover:text-blue-900 flex items-center text-lg group-hover:underline transition-colors duration-300"
-                        >
-                          {cardData.email}
-                          <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </button>
+                        <div className="space-y-1">
+                          {cardData.emails.map((email, index) => (
+                            <button 
+                              key={index}
+                              onClick={() => window.location.href = `mailto:${email}`}
+                              className="text-blue-800 font-semibold hover:text-blue-900 flex items-center text-lg group-hover:underline transition-colors duration-300 block w-full text-left"
+                            >
+                              {email}
+                              <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </button>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -440,6 +310,21 @@ END:VCARD`;
                     <span className="truncate">Ver QR Code do Cartão</span>
                   </button>
                 </div>
+                <Dialog open={isQrOpen} onOpenChange={setIsQrOpen}>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle>QR Code - Associação Anajô</DialogTitle>
+                    </DialogHeader>
+                    <div className="flex flex-col items-center justify-center gap-3 py-2">
+                      {qrDataUrl ? (
+                        <img src={qrDataUrl} alt="QR Code do Cartão" className="w-60 h-60" />
+                      ) : (
+                        <div className="text-sm text-gray-500">Gerando QR Code...</div>
+                      )}
+                      <p className="text-sm text-gray-600">Escaneie para abrir o cartão</p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
                 
                 {/* Download PDF */}
                 <div>

@@ -32,8 +32,11 @@
     "volunteerButton": "Volunteer",
     "stats": {
       "children": "Children Served",
+      "childrenNumber": "140",
       "projects": "Active Projects",
-      "years": "Years of Impact"
+      "projectsNumber": "15",
+      "years": "Years of Impact",
+      "yearsNumber": "8"
     },
     "watchVideo": "Watch our video"
   },
@@ -214,7 +217,7 @@
       },
       "capacity": {
         "title": "Capacity",
-        "text": "We serve up to 500 children and youth simultaneously"
+        "text": "We serve up to 140 children and youth simultaneously"
       }
     }
   },
@@ -357,7 +360,8 @@
       "email": {
         "title": "Email",
         "details": [
-          "hail.capoeira@hotmail.com"
+          "hail.capoeira@hotmail.com",
+          "anajogba@yahoo.com.br"
         ]
       },
       "hours": {
@@ -453,7 +457,7 @@
       "description": "Use the QR Code below or copy the PIX key to make your donation quickly and securely.",
       "loadingQR": "Loading QR Code...",
       "scanInstruction": "Scan the QR Code with your bank",
-      "keyLabel": "PIX Key:",
+      "keyLabel": "PIX Key (CNPJ):",
       "copyKey": "Copy Key",
       "keyCopied": "Key copied!",
       "howToDonate": "How to donate:",
@@ -469,15 +473,11 @@
       "administration": "Administration"
     },
     "impact": {
-      "title": "2024 Impact",
-      "childrenServed": "500+ children served",
-      "newProjects": "15 new projects",
-      "gradeImprovement": "95% grade improvement",
+      "title": "2025 Impact",
+      "childrenServed": "140 children served",
+      "newProjects": "15 new projects implemented",
+      "gradeImprovement": "Significant improvement in grades",
       "activeVolunteers": "200 active volunteers"
-    },
-    "testimonial": {
-      "quote": "Anajô NGO changed my life!",
-      "author": "João Silva - Former participant"
     },
     "security": {
       "notice": "100% secure transaction"
@@ -653,9 +653,9 @@
       "duration": "School year",
       "instructor": "Educational Team",
       "results": [
-        "80% improvement in participants' grades",
-        "95% approval in the school year",
-        "100% increase in self-confidence"
+        "Significant improvement in participants' grades",
+        "High approval rate in the school year",
+        "Increased self-confidence in children"
       ],
       "requirements": "Children aged 6-12 with school difficulties",
       "gallery": {

@@ -2,7 +2,7 @@
 
 ## 📋 Visão Geral
 
-O cartão de visita digital foi criado como uma aplicação **standalone** (independente) que pode ser hospedada separadamente do site principal da Associação Anajô.
+Agora o cartão de visita é servido apenas pelo site React na rota `/cartao`.
 
 ## 🚀 Configuração Atual
 
@@ -12,9 +12,7 @@ O cartão de visita digital foi criado como uma aplicação **standalone** (inde
 - **Rota do cartão**: `http://localhost:3000/cartao`
 
 ### **Cartão Standalone:**
-- **Porta**: 3001
-- **URL**: `http://localhost:3001/`
-- **Arquivos**: `dist-cartao/` (pronto para hospedagem)
+Removido para simplificar o deploy. Use a rota `/cartao` do site.
 
 ## 🛠️ Comandos Disponíveis
 
@@ -23,8 +21,7 @@ O cartão de visita digital foi criado como uma aplicação **standalone** (inde
 # Site principal
 npm run dev
 
-# Cartão standalone (após build)
-npm run serve:cartao
+# (Standalone removido)
 ```
 
 ### **Build:**
@@ -32,8 +29,7 @@ npm run serve:cartao
 # Site principal
 npm run build
 
-# Cartão standalone
-npm run build:cartao
+# (Standalone removido)
 ```
 
 ## 📁 Estrutura de Arquivos
@@ -41,77 +37,71 @@ npm run build:cartao
 ```
 projeto/
 ├── dist/                    # Build do site principal
-├── dist-cartao/            # Build do cartão standalone
-│   ├── index.html          # Página principal do cartão
-│   ├── logoanajo.png       # Logo da associação
-│   └── profile-placeholder.svg  # Avatar placeholder
+├── (sem dist-cartao)
 ├── public/
-│   └── cartao-standalone.html  # Template standalone
+│   └── (standalone removido)
 ├── src/
 │   └── pages/
 │       └── CartaoVisita.tsx    # Componente React
-└── build-cartao.cjs        # Script de build
+└── (script standalone removido)
 ```
 
 ## 🌐 Opções de Hospedagem
 
-### **1. Hospedagem Separada (Recomendado)**
+### **1. Hospedagem do Site (Recomendado)**
 
 #### **Vantagens:**
-- ✅ **Independência total** do site principal
-- ✅ **URLs diferentes** (ex: `cartao.anajo.org.br`)
-- ✅ **Deploy independente**
-- ✅ **Sem conflitos** de dependências
+- ✅ Deploy único (site + cartão)
+- ✅ Menos arquivos e menos manutenção
 
 #### **Como hospedar:**
 1. **Fazer build:**
    ```bash
-   npm run build:cartao
+   npm run build
    ```
 
-2. **Upload da pasta `dist-cartao/`:**
+2. **Upload da pasta `dist/`:**
    - Upload para servidor web
-   - Configurar domínio/subdomínio
-   - Exemplo: `https://cartao.anajo.org.br/`
+   - Acessar via: `https://seu-dominio/cartao`
 
 ### **2. Hospedagem no Mesmo Domínio**
 
 #### **Opção A: Subpasta**
 ```
-https://anajo.org.br/cartao/
+https://anajo.org.br/cartao
 ```
-- Upload `dist-cartao/` para pasta `/cartao/` no servidor
+- Publicar `dist/` no servidor
 
 #### **Opção B: Subdomínio**
 ```
 https://cartao.anajo.org.br/
 ```
-- Configurar subdomínio apontando para `dist-cartao/`
+- Configurar subdomínio apontando para `dist/` (rota `/cartao`)
 
 ### **3. Hospedagem Gratuita**
 
 #### **GitHub Pages:**
-1. Criar repositório `anajo-cartao`
-2. Upload dos arquivos `dist-cartao/`
+1. Usar repositório do site
+2. Upload dos arquivos `dist/`
 3. Ativar GitHub Pages
 4. URL: `https://username.github.io/anajo-cartao/`
 
 #### **Netlify:**
 1. Conectar repositório GitHub
-2. Configurar pasta de build: `dist-cartao`
+2. Configurar pasta de build: `dist`
 3. Deploy automático
 4. URL personalizada: `https://cartao-anajo.netlify.app`
 
 #### **Vercel:**
 1. Importar projeto
-2. Configurar pasta: `dist-cartao`
+2. Configurar pasta: `dist`
 3. Deploy
 4. URL: `https://cartao-anajo.vercel.app`
 
 ## 🔧 Personalização
 
 ### **Alterar Dados do Cartão:**
-Editar arquivo `public/cartao-standalone.html`:
+Edite `src/pages/CartaoVisita.tsx` para alterar dados do cartão:
 
 ```html
 <!-- Dados pessoais -->
@@ -154,17 +144,17 @@ Editar arquivo `public/cartao-standalone.html`:
 
 ### **1. Build:**
 ```bash
-npm run build:cartao
+npm run build
 ```
 
 ### **2. Teste Local:**
 ```bash
-npm run serve:cartao
-# Acesse: http://localhost:3001/
+npm run preview
+# Acesse: http://localhost:4173/cartao
 ```
 
 ### **3. Upload:**
-- Compactar pasta `dist-cartao/`
+- Compactar pasta `dist/`
 - Upload para servidor web
 - Configurar domínio
 
