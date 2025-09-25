@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Calendar, MapPin, Users, Trophy, BookOpen, Music, Filter, Camera } from 'lucide-react';
+import { Calendar, MapPin, Users, Trophy, BookOpen, Music, Filter, Camera, Image } from 'lucide-react';
 import ProjectCarousel from '@/components/ui/ProjectCarousel';
 import { useTranslatedProjects } from '@/data/projects';
 
@@ -14,6 +14,7 @@ const Projetos = () => {
   const [activeFilter, setActiveFilter] = useState(t('projectsPage.categories.all'));
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
   const filters = useMemo(() => [
     t('projectsPage.categories.all'),
@@ -126,25 +127,43 @@ const Projetos = () => {
                     style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={() => setSelectedProject(project.id)}
                   >
-                    {/* Project Image */}
-                    <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+                    {/* Project Image - Versão Ultra Simplificada para Mobile */}
+                    <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-100" style={{ height: '200px', minHeight: '200px' }}>
                       <img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                         style={{ 
-                          objectPosition: project.image.includes('jiujitsu1') 
-                            ? 'center 20%'
-                            : project.image.includes('musica1')
-                              ? 'center 25%'
-                              : undefined 
+                          height: '200px',
+                          minHeight: '200px',
+                          width: '100%',
+                          display: 'block',
+                          backgroundColor: '#f3f4f6',
+                          objectFit: 'cover'
+                        }}
+                        onError={(e) => {
+                          console.error(`❌ ERRO ao carregar imagem do projeto ${project.id}:`, project.image);
+                          console.error('Erro completo:', e);
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          target.parentElement!.innerHTML = `
+                            <div style="height: 200px; display: flex; align-items: center; justify-content: center; background-color: #f3f4f6; border: 2px dashed #d1d5db;">
+                              <div style="text-align: center; color: #6b7280;">
+                                <div style="font-size: 24px; margin-bottom: 8px;">📷</div>
+                                <div style="font-size: 14px;">Imagem não disponível</div>
+                                <div style="font-size: 12px; color: #9ca3af; margin-top: 4px; word-break: break-all;">${project.image}</div>
+                                <div style="font-size: 10px; color: #ef4444; margin-top: 4px;">Projeto ID: ${project.id}</div>
+                              </div>
+                            </div>
+                          `;
+                        }}
+                        onLoad={() => {
+                          console.log(`✅ SUCESSO: Imagem carregada para projeto ${project.id}:`, project.image);
+                          console.log('Dimensões da imagem:', e.target.naturalWidth, 'x', e.target.naturalHeight);
+                        }}
+                        onLoadStart={() => {
+                          console.log(`🔄 INICIANDO carregamento da imagem do projeto ${project.id}:`, project.image);
                         }}
                       />
-                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                          <Camera className="w-6 h-6 text-white" />
-                        </div>
-                      </div>
                       <div className={`absolute top-4 left-4 ${getCategoryColor(project.category)} px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-2`}>
                         <IconComponent className="w-4 h-4" />
                         <span>{project.category}</span>

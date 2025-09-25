@@ -246,10 +246,94 @@
 
   .project-card img {
     @apply transition-transform duration-500;
+    min-height: 200px;
+    background-color: #f3f4f6;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
   }
-
+  
   .project-card:hover img {
     @apply transform scale-105;
+  }
+  
+  /* CSS específico para mobile - força exibição */
+  @media (max-width: 768px) {
+    .project-card img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: 200px !important;
+      min-height: 200px !important;
+      width: 100% !important;
+      object-fit: cover !important;
+      background-color: #f3f4f6 !important;
+    }
+    
+    .project-card .relative {
+      height: 200px !important;
+      min-height: 200px !important;
+      overflow: hidden !important;
+    }
+    
+    /* Força exibição de todas as imagens no mobile */
+    img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Específico para imagens dos projetos */
+    .project-card img,
+    .project-card .relative img,
+    .project-card div img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: 200px !important;
+      min-height: 200px !important;
+      width: 100% !important;
+      object-fit: cover !important;
+      background-color: #f3f4f6 !important;
+    }
+    
+    /* Força exibição de todas as imagens no mobile */
+    * img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Força exibição de todas as imagens no mobile */
+    * img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Força exibição de todas as imagens no mobile */
+    * img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Força exibição de todas as imagens no mobile */
+    * img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Força exibição de todas as imagens no mobile */
+    * img {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   }
 
   /* Form styles */
