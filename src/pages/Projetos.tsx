@@ -36,7 +36,7 @@ const Projetos = () => {
       );
       setFilteredProjects(filtered);
     }
-  }, [activeFilter, projects]);
+  }, [activeFilter, projects, t]);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
