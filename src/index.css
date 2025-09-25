@@ -239,6 +239,156 @@
     }
   }
 
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    }
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.4s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.6s ease-out;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Responsividade para modais */
+  @media (max-width: 640px) {
+    .modal-responsive {
+      margin: 0.5rem;
+      max-height: 95vh;
+    }
+    
+    .modal-image-section {
+      min-height: 50vh;
+      max-height: 60vh;
+    }
+    
+    .modal-content-section {
+      max-height: 40vh;
+      overflow-y: auto;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .modal-responsive {
+      margin: 1rem;
+      max-height: 90vh;
+    }
+    
+    .modal-image-section {
+      min-height: 60vh;
+    }
+    
+    .modal-content-section {
+      max-height: 50vh;
+      overflow-y: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .modal-responsive {
+      margin: 1rem;
+      max-height: 90vh;
+    }
+  }
+
+  /* Efeito de pulso para botões de navegação */
+  @keyframes gentle-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+  }
+
+  .nav-button-pulse {
+    animation: gentle-pulse 3s ease-in-out infinite;
+  }
+
+  .nav-button-pulse:hover {
+    animation: none;
+  }
+
   /* Estados de hover para cards */
   .project-card {
     @apply card-elegant overflow-hidden cursor-pointer;

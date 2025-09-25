@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -16,6 +16,13 @@ const Projetos = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
+  const categoryTranslations = useMemo(() => ({
+    all: t('projectsPage.categories.all'),
+    sports: t('projectsPage.categories.sports'),
+    education: t('projectsPage.categories.education'),
+    culture: t('projectsPage.categories.culture')
+  }), [t, i18n.language]);
+
   const filters = useMemo(() => [
     t('projectsPage.categories.all'),
     t('projectsPage.categories.sports'),
@@ -26,10 +33,11 @@ const Projetos = () => {
   // Update activeFilter when language changes
   useEffect(() => {
     setActiveFilter(t('projectsPage.categories.all'));
-  }, [i18n.language, t]);
+  }, [t, i18n.language]);
 
   useEffect(() => {
-    if (activeFilter === t('projectsPage.categories.all')) {
+    const allCategory = t('projectsPage.categories.all');
+    if (activeFilter === allCategory) {
       setFilteredProjects(projects);
     } else {
       const filtered = projects.filter(
@@ -39,31 +47,51 @@ const Projetos = () => {
     }
   }, [activeFilter, projects, t]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = useCallback((category: string) => {
+    const sportsCategory = t('projectsPage.categories.sports');
+    const educationCategory = t('projectsPage.categories.education');
+    const cultureCategory = t('projectsPage.categories.culture');
+    
     switch (category) {
-      case t('projectsPage.categories.sports'):
+      case sportsCategory:
         return Trophy;
-      case t('projectsPage.categories.education'):
+      case educationCategory:
         return BookOpen;
-      case t('projectsPage.categories.culture'):
+      case cultureCategory:
         return Music;
       default:
         return Trophy;
     }
-  };
+  }, [t]);
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = useCallback((category: string) => {
+    const sportsCategory = t('projectsPage.categories.sports');
+    const educationCategory = t('projectsPage.categories.education');
+    const cultureCategory = t('projectsPage.categories.culture');
+    
     switch (category) {
-      case t('projectsPage.categories.sports'):
+      case sportsCategory:
         return 'bg-primary text-primary-foreground';
-      case t('projectsPage.categories.education'):
+      case educationCategory:
         return 'bg-secondary text-secondary-foreground';
-      case t('projectsPage.categories.culture'):
+      case cultureCategory:
         return 'bg-accent text-accent-foreground';
       default:
         return 'bg-primary text-primary-foreground';
     }
-  };
+  }, [t]);
+
+  const handleFilterChange = useCallback((filter: string) => {
+    setActiveFilter(filter);
+  }, []);
+
+  const handleProjectSelect = useCallback((projectId: number) => {
+    setSelectedProject(projectId);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -99,7 +127,7 @@ const Projetos = () => {
                 {filters.map((filter) => (
                   <button
                     key={filter}
-                    onClick={() => setActiveFilter(filter)}
+                    onClick={() => handleFilterChange(filter)}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                       activeFilter === filter
                         ? 'bg-primary text-primary-foreground'
@@ -125,7 +153,7 @@ const Projetos = () => {
                     key={project.id}
                     className="project-card animate-fade-up cursor-pointer"
                     style={{ animationDelay: `${index * 0.1}s` }}
-                    onClick={() => setSelectedProject(project.id)}
+                    onClick={() => handleProjectSelect(project.id)}
                   >
                     {/* Project Image - Versão Ultra Simplificada para Mobile */}
                     <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-100" style={{ height: '200px', minHeight: '200px' }}>
@@ -156,9 +184,10 @@ const Projetos = () => {
                             </div>
                           `;
                         }}
-                        onLoad={() => {
+                        onLoad={(e) => {
                           console.log(`✅ SUCESSO: Imagem carregada para projeto ${project.id}:`, project.image);
-                          console.log('Dimensões da imagem:', e.target.naturalWidth, 'x', e.target.naturalHeight);
+                          const target = e.target as HTMLImageElement;
+                          console.log('Dimensões da imagem:', target.naturalWidth, 'x', target.naturalHeight);
                         }}
                         onLoadStart={() => {
                           console.log(`🔄 INICIANDO carregamento da imagem do projeto ${project.id}:`, project.image);
@@ -227,7 +256,7 @@ const Projetos = () => {
                 project={projects.find(p => p.id === selectedProject) as { id: number; title: string; category: string; description: string; participants: number; locations: Array<{ branch: string; schedule: string; }>; duration: string; instructor: string; results: string[]; requirements: string; }}
                 images={projects.find(p => p.id === selectedProject)?.gallery || []}
                 isOpen={selectedProject !== null}
-                onClose={() => setSelectedProject(null)}
+                onClose={handleCloseModal}
               />
             )}
           </div>

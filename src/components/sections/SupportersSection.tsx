@@ -1,10 +1,10 @@
-import { Building2, Heart, Users, Award } from 'lucide-react';
+import { Building2, Users, Award } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useTranslatedSupporters } from '@/data/supporters';
 
 const SupportersSection = () => {
   const { t } = useTranslation();
-  const { companies, individuals } = useTranslatedSupporters();
+  const { companies } = useTranslatedSupporters();
 
   return (
     <section className="section-padding bg-muted">
@@ -56,49 +56,6 @@ const SupportersSection = () => {
                     {t('supporters.partnerSince', { since: company.since })}
                   </div>
                 )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Pessoas Especiais */}
-        <div>
-          <div className="flex items-center justify-center mb-8 scroll-slide-right">
-            <Heart className="w-6 h-6 text-destructive mr-3" />
-            <h3 className="text-2xl font-semibold text-foreground">{t('supporters.individualsTitle')}</h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {individuals.map((person, index) => (
-                <div
-                  key={person.id}
-                  className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 scroll-slide-right"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <img 
-                      src={person.avatar} 
-                      alt={person.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">{person.name}</h4>
-                    <span className="text-sm text-primary font-medium">{person.role}</span>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <div className="flex items-center text-sm text-muted-foreground mb-2">
-                    <Users className="w-4 h-4 mr-2" />
-                    {person.contribution}
-                  </div>
-                </div>
-                
-                <blockquote className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4">
-                  "{person.testimonial}"
-                </blockquote>
               </div>
             ))}
           </div>
