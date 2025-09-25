@@ -97,7 +97,7 @@ export const projects: Project[] = [
     title: 'Aulas de Música',
     category: 'Cultura',
     description: 'Aulas de música e instrumentos músicais.',
-    image: '/cultura-projeto.jpg',
+    image: '/musica1.jpg',
     participants: 30,
     locations: [
       {
@@ -108,19 +108,29 @@ export const projects: Project[] = [
     
     gallery: [
       {
-        src: '/cultura-projeto.jpg',
-        alt: 'Aula de dança',
-        caption: 'Aula de dança folclórica'
+        src: '/musica.jpg',
+        alt: 'Turma com violões',
+        caption: 'Crianças apresentando seus violões nas aulas'
       },
       {
-        src: '/cultura-projeto.jpg',
-        alt: 'Apresentação musical',
-        caption: 'Apresentação musical em evento comunitário'
+        src: '/musica1.jpg',
+        alt: 'Aula de música',
+        caption: 'Aula de violão em grupo'
       },
       {
-        src: '/cultura-projeto.jpg',
-        alt: 'Ensaio de teatro',
-        caption: 'Ensaio de peça teatral'
+        src: '/musica2.jpg',
+        alt: 'Aula de flauta',
+        caption: 'Prática de flauta doce com o professor'
+      },
+      {
+        src: '/musica3.jpg',
+        alt: 'Turma de violão animada',
+        caption: 'Alunos demonstrando acordes durante a aula'
+      },
+      {
+        src: '/musica4.jpg',
+        alt: 'Prática musical em sala',
+        caption: 'Exercícios de musicalização com flautas'
       }
     ]
   },
@@ -129,7 +139,7 @@ export const projects: Project[] = [
     title: 'Jiu-Jitsu',
     category: 'Esportes',
     description: 'Aulas de Jiu-Jitsu para crianças e adolescentes, desenvolvendo habilidades motoras, cognitivas, sociais e auto-defesa.',
-    image: '/jiujitsu1.jpeg',
+    image: '/jiujitsu1.jpg',
     participants: 45,
     locations: [
       {
@@ -153,7 +163,27 @@ export const projects: Project[] = [
         src: '/jiujitsu2.jpg',
         alt: 'Premiação',
         caption: 'Cerimônia de premiação do campeonato'
-      }
+        },
+        {
+          src: '/jiujitsu3.jpg',
+          alt: 'Treino em grupo',
+          caption: 'Alunos alinhados para início do treino'
+        },
+        {
+          src: '/jiujitsu4.jpg',
+          alt: 'Técnica no solo',
+          caption: 'Prática de finalizações no tatame'
+        },
+        {
+          src: '/jiujitsu5.jpg',
+          alt: 'Sparring supervisionado',
+          caption: 'Exercícios supervisionados para correção de postura'
+        },
+        {
+          src: '/jiujitsu6.jpg',
+          alt: 'Turma Jiu-Jitsu',
+          caption: 'Registro da turma reunida após a aula'
+        }
     ]
   },
   {
@@ -210,7 +240,7 @@ export const getProjectsByCategory = (category: string): Project[] => {
 };
 
 // Hook para obter dados dos projetos traduzidos
-export const useTranslatedProjects = (): Project[] => {
+export const useTranslatedProjects = (): Array<Omit<Project, 'category'> & { category: string }> => {
   const { t } = useTranslation();
   
   return projects.map(project => ({
@@ -241,7 +271,7 @@ const getTranslatedImpact = (id: number, t: (key: string) => string): string => 
   }
 };
 
-export const useTranslatedProjectsPreview = (): Project[] => {
+export const useTranslatedProjectsPreview = (): Array<Omit<Project, 'category'> & { category: string }> => {
   const { t } = useTranslation();
   const previewProjects = getProjectsPreview();
 

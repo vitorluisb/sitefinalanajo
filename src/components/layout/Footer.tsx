@@ -32,7 +32,7 @@ const Footer = () => {
               {t('footer.mission')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/assocana.jo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/associacaoanajo/" className="text-muted-foreground hover:text-primary transition-colors">

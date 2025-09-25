@@ -20,20 +20,24 @@ export interface Individual {
 const companies: Omit<Company, 'name' | 'contribution'>[] = [
   {
     id: 1,
-    logo:'logoprefeituragba.png',
+    logo:'/logoprefeituragba.png',
     since: '2019'
   },
   {
     id: 2,
-    logo: 'logopm.png',
+    logo: '/logopm.png',
   },
   {
     id: 3,
-    logo: 'logoanajo.png',
+    logo: '/logoanajo.png',
   },
   {
     id: 4,
-    logo: 'idealcap.jpg',
+    logo: '/idealcap.jpg',
+  },
+  {
+    id: 5,
+    logo: '/Logo_Gastromotiva.png',
   }
 ];
 
@@ -52,7 +56,7 @@ const individuals: Omit<Individual, 'name' | 'role' | 'contribution' | 'testimon
   }
 ];
 
-const companyKeys = ['prefeitura', 'pm', 'kinderhilfswerk', 'idealCapoeira'];
+const companyKeys = ['prefeitura', 'pm', 'kinderhilfswerk', 'idealCapoeira', 'cozinhaSolidaria'];
 const individualKeys = ['maria', 'joao', 'ana'];
 
 export const useTranslatedSupporters = (): { companies: Company[], individuals: Individual[] } => {

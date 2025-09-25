@@ -25,18 +25,18 @@ const SupportersSection = () => {
             <h3 className="text-2xl font-semibold text-foreground">{t('supporters.companiesTitle')}</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {companies.map((company, index) => (
                 <div
                   key={company.id}
-                  className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 scroll-scale"
+                className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 scroll-scale"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+              <div className="w-32 h-20 mx-auto mb-4 overflow-hidden flex items-center justify-center">
                   <img 
                     src={company.logo} 
                     alt={`Logo ${company.name}`}
-                    className="w-full h-full object-contain"
+                  className="w-full h-full object-contain"
                   />
                 </div>
                 

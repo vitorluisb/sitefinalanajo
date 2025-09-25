@@ -28,9 +28,9 @@
       "subtitle": "Fortalecendo laços e construindo uma sociedade melhor"
     },
     "title": "Transformando Vidas Através da Educação e Esporte",
-    "subtitle": "A ONG Anajô atua há mais de 10 anos promovendo oportunidades para crianças e jovens em situação de vulnerabilidade social em Guarabira-PB.",
+    "subtitle": "A Associação Anajô atua há mais de 10 anos promovendo oportunidades para crianças e jovens em situação de vulnerabilidade social em Guarabira-PB.",
     "cta": "Faça Parte",
-    "description": "Na ONG Anajô, acreditamos que toda criança merece oportunidades para crescer, aprender e sonhar. Junte-se a nós nesta missão de transformar comunidades.",
+    "description": "Na Associação Anajô, acreditamos que toda criança merece oportunidades para crescer, aprender e sonhar. Junte-se a nós nesta missão de transformar comunidades.",
     "donateButton": "Doar",
     "volunteerButton": "Voluntariar",
     "watchVideo": "Assista nosso vídeo",
@@ -44,7 +44,7 @@
     }
   },
   "about": {
-    "title": "Sobre a ONG Anajô",
+    "title": "Sobre a Associação Anajô",
     "description": "Conheça nossa história, missão e os valores que nos guiam na transformação de vidas através da educação e do esporte.",
     "mission": {
       "title": "Nossa Missão",
@@ -87,7 +87,7 @@
       },
       "hours": {
         "title": "Funcionamento",
-        "text": "Segunda a Sexta: 8h às 18h\nSábados: 8h às 12h\nDomingos: Fechado"
+        "text": "Segunda a Sexta: 8h às 23h"
       },
       "capacity": {
         "title": "Capacidade",
@@ -243,7 +243,7 @@
           },
           "austria": {
             "label": "Kinderhilfswerk Anajô Austria e Ideal Capoeira Europa",
-            "text": "Organizações parceiras na Áustria que fornecem apoio financeiro fundamental para a construção do espaço físico, compra de equipamentos e manutenção dos recursos. Além disso, trabalham na sensibilização da sociedade europeia e na captação de recursos."
+            "text": "Organizações parceiras na Áustria que fornecem apoio voluntario."
           }
         }
       }
@@ -251,7 +251,7 @@
   },
   "mission": {
     "title": "Quem Somos",
-    "subtitle": "A ONG Anajô nasceu do sonho de transformar realidades através do esporte, educação e cultura. Cada projeto é uma semente de esperança plantada no coração da comunidade.",
+    "subtitle": "A Associação Anajô nasceu do sonho de transformar realidades através do esporte, educação e cultura. Cada projeto é uma semente de esperança plantada no coração da comunidade.",
     "values": {
       "mission": {
         "title": "Nossa Missão",
@@ -370,11 +370,15 @@
       },
       "kinderhilfswerk": {
         "name": "Kinderhilfswerk Anajô",
-        "contribution": "Organização parceira na Áustria que fornece apoio financeiro fundamental para a construção do espaço físico, compra de equipamentos e manutenção de recursos. Também trabalha para conscientizar a sociedade europeia e arrecadar fundos."
+        "contribution": "Organizações parceiras na Áustria que fornecem apoio voluntario."
       },
       "idealCapoeira": {
         "name": "Ideal Capoeira Europa",
-        "contribution": "Organização parceira na Áustria que fornece apoio financeiro fundamental para a construção do espaço físico, compra de equipamentos e manutenção de recursos. Também trabalha para conscientizar a sociedade europeia e arrecadar fundos."
+        "contribution": "Organizações parceiras na Áustria que fornecem apoio voluntario."
+      },
+      "cozinhaSolidaria": {
+        "name": "Gastromotiva",
+        "contribution": "Cozinha Solidária"
       }
     },
     "individuals": {
@@ -458,7 +462,7 @@
     "entrepreneurshipWorkshop": {
       "title": "Workshop de Empreendedorismo",
       "description": "Capacitação para jovens interessados em desenvolver seus próprios negócios.",
-      "location": "Sede da ONG",
+      "location": "Sede da Associação",
       "category": "Educação",
       "gallery": [
         {
@@ -525,6 +529,10 @@
       "ideal": {
         "name": "Ideal Capoeira Europa",
         "contribution": "Organização parceira na Áustria que fornece apoio financeiro fundamental para a construção do espaço físico, compra de equipamentos e manutenção de recursos. Também trabalha para conscientizar a sociedade europeia e arrecadar fundos."
+      },
+      "cozinhaSolidaria": {
+        "name": "Cozinha Solidária",
+        "contribution": "Apoio solidário à comunidade"
       }
     },
     "individuals": {
@@ -554,7 +562,7 @@
   },
   "announcements": {
     "title": "Anúncios Importantes",
-    "subtitle": "Mantenha-se atualizado com as últimas notícias e oportunidades da ONG Anajô",
+    "subtitle": "Mantenha-se atualizado com as últimas notícias e oportunidades da Associação Anajô",
     "urgent": "Urgente",
     "readMore": "Ler mais"
   },
@@ -684,7 +692,7 @@
     },
     "questions": {
       "title": "Perguntas Frequentes",
-      "subtitle": "Tire suas dúvidas sobre o voluntariado na ONG Anajô",
+    "subtitle": "Tire suas dúvidas sobre o voluntariado na Associação Anajô",
       "otherContacts": "Outras formas de contato"
     }
   },
@@ -738,7 +746,7 @@
       "hours": {
         "title": "Funcionamento",
         "details": [
-          "Segunda a Sexta: 8h às 18h",
+          "Segunda a Sexta: 8h às 23h",
           "Sábados: 8h às 12h",
           "Domingos: Fechado"
         ]
@@ -804,7 +812,7 @@
       "hours": {
         "title": "Funcionamento",
         "details": [
-          "Segunda a Sexta: 8h às 18h",
+          "Segunda a Sexta: 8h às 23h",
           "Sábados: 8h às 12h",
           "Domingos: Fechado"
         ]
@@ -876,7 +884,7 @@
     "faq": {
       "title": "Perguntas Frequentes",
       "q1": "Posso deduzir a doação do Imposto de Renda?",
-      "a1": "Sim! A ONG Anajô possui certificado de utilidade pública. Guarde o comprovante de doação para declarar no seu IR.",
+      "a1": "Sim! A Associação Anajô possui certificado de utilidade pública. Guarde o comprovante de doação para declarar no seu IR.",
       "q2": "Como sei que minha doação está sendo bem utilizada?",
       "a2": "Publicamos relatórios financeiros trimestrais em nossa seção de transparência. Você também receberá updates sobre o impacto das doações.",
       "q3": "Posso visitar os projetos que minha doação financia?",

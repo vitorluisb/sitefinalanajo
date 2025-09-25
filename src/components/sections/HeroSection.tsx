@@ -10,7 +10,7 @@ const HeroSection = () => {
   
   const slides = [
     {
-      image: '/herojiu.svg',
+      image: '/jiujitsu1.jpg',
       alt: t('hero.slide1.alt'),
       title: t('hero.slide1.title'),
       subtitle: t('hero.slide1.subtitle')
@@ -65,7 +65,8 @@ const HeroSection = () => {
             <img 
               src={slide.image} 
               alt={slide.alt} 
-              className="w-full h-full object-cover object-center sm:object-center md:object-center lg:object-cover xl:object-cover"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: (slide as any).objectPosition ?? (typeof slide.image === 'string' && slide.image.includes('jiujitsu1') ? 'center 20%' : undefined) }}
             />
           </div>
         ))}

@@ -54,9 +54,9 @@ const Doar = () => {
       return payload + crc16;
     };
 
-    const chave = pixKey; // Chave PIX da ONG
-    const nome = "ONG ANAJO ASSOCIACAO NAJA"; // Nome da ONG
-    const cidade = "GUARABIRA"; // Cidade da ONG
+    const chave = pixKey; // Chave PIX da associação
+    const nome = "ASSOCIACAO ANAJO"; // Nome da associação
+    const cidade = "GUARABIRA"; // Cidade da associação
 
     const payload = gerarPayload(chave, nome, cidade);
 

@@ -9,14 +9,14 @@ interface ProjectCarouselProps {
     category: string;
     description: string;
     participants: number;
-    locations: Array<{
+    locations?: Array<{
       branch: string;
       schedule: string;
     }>;
-    duration: string;
-    instructor: string;
-    results: string[];
-    requirements: string;
+    duration?: string;
+    instructor?: string;
+    results?: string[];
+    requirements?: string;
   };
   images: Array<{
     src: string;
@@ -96,6 +96,12 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
       default: return 'bg-primary text-primary-foreground';
     }
   };
+
+  const safeLocations = project.locations || [];
+  const safeResults = project.results || [];
+  const safeDuration = project.duration || '—';
+  const safeInstructor = project.instructor || '—';
+  const safeRequirements = project.requirements || '—';
 
   return (
     <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center animate-fade-in">
@@ -200,7 +206,7 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
                     <div className="flex-1">
                       <div className="font-medium text-foreground mb-1">{t('projectsPage.locations')}:</div>
                       <div className="space-y-1">
-                        {project.locations.map((location, idx) => (
+                        {safeLocations.map((location, idx) => (
                           <div key={idx} className="text-sm">
                             <div className="font-medium text-foreground">{location.branch}</div>
                             <div className="text-muted-foreground">{location.schedule}</div>
@@ -213,7 +219,7 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
                   <div className="flex items-center space-x-3">
                     <Clock className="w-5 h-5 text-primary" />
                     <div>
-                      <div className="font-medium text-foreground">{project.duration}</div>
+                      <div className="font-medium text-foreground">{safeDuration}</div>
                       <div className="text-sm text-muted-foreground">{t('projectsPage.totalDuration')}</div>
                     </div>
                   </div>
@@ -223,7 +229,7 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
                 <div className="bg-primary-soft p-4 rounded-lg">
                   <h4 className="font-semibold text-primary mb-3">{t('projectsPage.results')}:</h4>
                   <ul className="space-y-2">
-                    {project.results.map((result, idx) => (
+                    {safeResults.map((result, idx) => (
                       <li key={idx} className="text-sm text-primary flex items-start">
                         <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
                         {result}
@@ -235,13 +241,13 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
                 {/* Requirements */}
                 <div className="border-t border-border pt-4">
                   <h4 className="font-semibold text-foreground mb-2">{t('projectsPage.requirements')}:</h4>
-                  <p className="text-sm text-muted-foreground">{project.requirements}</p>
+                  <p className="text-sm text-muted-foreground">{safeRequirements}</p>
                 </div>
 
                 {/* Instructor */}
                 <div className="bg-muted p-4 rounded-lg">
                   <h4 className="font-semibold text-foreground mb-1">{t('projectsPage.instructor')}:</h4>
-                  <p className="text-sm text-muted-foreground">{project.instructor}</p>
+                  <p className="text-sm text-muted-foreground">{safeInstructor}</p>
                 </div>
               </div>
             </div>

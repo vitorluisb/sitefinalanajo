@@ -18,7 +18,7 @@ const CartaoVisita = () => {
   const cardData = {
     name: 'Associação Anajô',
     title: 'Transformando Vidas Através da Educação e Esporte',
-    organization: 'ONG - Desenvolvimento Social e Cultural',
+    organization: 'Associação - Desenvolvimento Social e Cultural',
     area: '',
     phone: '+55 83 8856-7721',
     emails: ['hail.capoeira@hotmail.com', 'anajogba@yahoo.com.br'],
@@ -26,7 +26,7 @@ const CartaoVisita = () => {
     bio: '',
     social: {
       instagram: 'https://www.instagram.com/associacaoanajo/',
-      facebook: 'https://facebook.com/anajo.ong',
+      facebook: 'https://www.facebook.com/assocana.jo',
       website: 'https://anajo.site',
       whatsapp: 'https://wa.me/5583885677721'
     }
@@ -69,8 +69,19 @@ const CartaoVisita = () => {
       pdf.text('Cartão de Visita Digital - Associação Anajô', 15, 20);
       pdf.text(`Gerado em: ${new Date().toLocaleDateString('pt-BR')}`, 15, 25);
       
-      // Salvar PDF
-      pdf.save('cartao-visita-associacao-anajo.pdf');
+      // Salvar/abrir PDF conforme o dispositivo
+      const ua = navigator.userAgent || '';
+      const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && (navigator as any).maxTouchPoints > 1);
+      const isAndroid = /Android/.test(ua);
+
+      if (isIOS || isAndroid) {
+        // Em mobile, abrir em nova aba para permitir compartilhar/salvar
+        const blobUrl = pdf.output('bloburl');
+        window.open(blobUrl, '_blank');
+      } else {
+        // Desktop: download direto
+        pdf.save('cartao-visita-associacao-anajo.pdf');
+      }
       
     } catch (error) {
       console.error('Erro ao gerar PDF:', error);

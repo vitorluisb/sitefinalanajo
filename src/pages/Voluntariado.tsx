@@ -75,7 +75,7 @@ const Voluntariado = () => {
 
   const handleSubmit = () => {
     // Gerar mensagem para WhatsApp
-    const mensagem = `Olá! Gostaria de me voluntariar na ONG Anajô.
+    const mensagem = `Olá! Gostaria de me voluntariar na Associação Anajô.
 
 *Dados Pessoais:*
 Nome: ${formData.nome}
@@ -387,7 +387,7 @@ Aguardo retorno para os próximos passos!`;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5583988567721?text=Olá! Tenho dúvidas sobre o programa de voluntariado da ONG Anajô."
+                href="https://wa.me/5583988567721?text=Olá! Tenho dúvidas sobre o programa de voluntariado da Associação Anajô."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center space-x-2"

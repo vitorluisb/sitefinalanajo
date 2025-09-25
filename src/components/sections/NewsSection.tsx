@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog'
 import { useTranslatedImprovements } from '@/data/improvements';
+import ProjectCarousel from '@/components/ui/ProjectCarousel';
 
 const NewsSection = () => {
   const { t } = useTranslation()
@@ -93,6 +94,8 @@ const NewsSection = () => {
           {/* Modal Carousel */}
           <Dialog open={isModalOpen} onOpenChange={closeModal}>
             <DialogContent className="max-w-6xl p-0">
+              <DialogTitle className="sr-only">{t('news.improvements')}</DialogTitle>
+              <DialogDescription className="sr-only">{selectedItem?.title}</DialogDescription>
               {selectedItem && (
                 <ProjectCarousel
                   project={{
@@ -101,8 +104,9 @@ const NewsSection = () => {
                     category: 'Cultura',
                     description: selectedItem.description,
                     participants: 0,
-                    location: '—',
-                    schedule: '—',
+                    locations: [
+                      { branch: '—', schedule: '—' }
+                    ],
                     duration: '—',
                     instructor: '—',
                     results: [],

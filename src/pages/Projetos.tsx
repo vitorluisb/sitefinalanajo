@@ -132,6 +132,13 @@ const Projetos = () => {
                         src={project.image} 
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        style={{ 
+                          objectPosition: project.image.includes('jiujitsu1') 
+                            ? 'center 20%'
+                            : project.image.includes('musica1')
+                              ? 'center 25%'
+                              : undefined 
+                        }}
                       />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                         <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">

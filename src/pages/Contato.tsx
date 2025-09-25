@@ -22,7 +22,7 @@ const Contato = () => {
     e.preventDefault();
     
     // Gerar mensagem para WhatsApp
-    const mensagem = `Olá! Estou entrando em contato através do site da ONG Anajô.
+    const mensagem = `Olá! Estou entrando em contato através do site da Associação Anajô.
 
 *Nome:* ${formData.nome}
 *Email:* ${formData.email}
@@ -283,7 +283,7 @@ Aguardo retorno. Obrigado!`;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5583988567721?text=Olá! Gostaria de agendar uma visita à ONG Anajô."
+                href="https://wa.me/5583988567721?text=Olá! Gostaria de agendar uma visita à Associação Anajô."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center space-x-2"
