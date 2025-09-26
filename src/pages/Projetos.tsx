@@ -4,12 +4,33 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Calendar, MapPin, Users, Trophy, BookOpen, Music, Filter, Camera, Image } from 'lucide-react';
 import ProjectCarousel from '@/components/ui/ProjectCarousel';
-import { useTranslatedProjects } from '@/data/projects';
+import { getAllProjects } from '@/data/projects';
 
 
 const Projetos = () => {
   const { t, i18n } = useTranslation();
-  const projects = useTranslatedProjects();
+  
+  // Memoizar projetos traduzidos para evitar loop infinito
+  const projects = useMemo(() => {
+    const allProjects = getAllProjects();
+    return allProjects.map(project => ({
+      ...project,
+      title: getTranslatedProjectTitle(project.id, t),
+      description: getTranslatedProjectDescription(project.id, t),
+      category: getTranslatedCategory(project.category, t),
+      locations: project.locations.map(location => ({
+        ...location,
+        branch: getTranslatedLocation(location.branch, t),
+        schedule: getTranslatedSchedule(location.schedule, t)
+      })),
+      impact: project.impact ? getTranslatedImpact(project.id, t) : undefined,
+      gallery: project.gallery?.map(item => ({
+        ...item,
+        alt: getTranslatedGalleryAlt(project.id, item.alt, t),
+        caption: item.caption ? getTranslatedGalleryCaption(project.id, item.caption, t) : undefined
+      }))
+    }));
+  }, [i18n.language, t]);
 
   const [activeFilter, setActiveFilter] = useState(t('projectsPage.categories.all'));
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -21,19 +42,19 @@ const Projetos = () => {
     sports: t('projectsPage.categories.sports'),
     education: t('projectsPage.categories.education'),
     culture: t('projectsPage.categories.culture')
-  }), [t, i18n.language]);
+  }), [i18n.language]);
 
   const filters = useMemo(() => [
     t('projectsPage.categories.all'),
     t('projectsPage.categories.sports'),
     t('projectsPage.categories.education'),
     t('projectsPage.categories.culture'),
-  ], [t, i18n.language]);
+  ], [i18n.language]);
 
   // Update activeFilter when language changes
   useEffect(() => {
     setActiveFilter(t('projectsPage.categories.all'));
-  }, [t, i18n.language]);
+  }, [i18n.language]);
 
   useEffect(() => {
     const allCategory = t('projectsPage.categories.all');
@@ -45,7 +66,7 @@ const Projetos = () => {
       );
       setFilteredProjects(filtered);
     }
-  }, [activeFilter, projects, t]);
+  }, [activeFilter, projects]);
 
   const getCategoryIcon = useCallback((category: string) => {
     const sportsCategory = t('projectsPage.categories.sports');
@@ -62,7 +83,7 @@ const Projetos = () => {
       default:
         return Trophy;
     }
-  }, [t]);
+  }, [i18n.language]);
 
   const getCategoryColor = useCallback((category: string) => {
     const sportsCategory = t('projectsPage.categories.sports');
@@ -79,7 +100,7 @@ const Projetos = () => {
       default:
         return 'bg-primary text-primary-foreground';
     }
-  }, [t]);
+  }, [i18n.language]);
 
   const handleFilterChange = useCallback((filter: string) => {
     setActiveFilter(filter);
@@ -290,6 +311,82 @@ const Projetos = () => {
       <Footer />
     </div>
   );
+};
+
+// Funções auxiliares para tradução (copiadas de projects.ts para evitar dependência circular)
+const getTranslatedProjectTitle = (id: number, t: (key: string) => string): string => {
+  switch (id) {
+    case 1: return t('projectData.capoeira.title');
+    case 2: return t('projectData.football.title');
+    case 3: return t('projectData.music.title');
+    case 4: return t('projectData.jiujitsu.title');
+    case 5: return t('projectData.tutoring.title');
+    default: return '';
+  }
+};
+
+const getTranslatedProjectDescription = (id: number, t: (key: string) => string): string => {
+  switch (id) {
+    case 1: return t('projectData.capoeira.description');
+    case 2: return t('projectData.football.description');
+    case 3: return t('projectData.music.description');
+    case 4: return t('projectData.jiujitsu.description');
+    case 5: return t('projectData.tutoring.description');
+    default: return '';
+  }
+};
+
+const getTranslatedCategory = (category: string, t: (key: string) => string): string => {
+  switch (category) {
+    case 'Esportes': return t('projectsPage.categories.sports');
+    case 'Educação': return t('projectsPage.categories.education');
+    case 'Cultura': return t('projectsPage.categories.culture');
+    default: return category;
+  }
+};
+
+const getTranslatedLocation = (branch: string, t: (key: string) => string): string => {
+  if (branch.includes('Anajô I')) return t('projectData.locations.anajo1');
+  if (branch.includes('Anajô II')) return t('projectData.locations.anajo2');
+  if (branch.includes('Anajô III')) return t('projectData.locations.anajo3');
+  if (branch.includes('Anajô IV')) return t('projectData.locations.anajo4');
+  return branch;
+};
+
+const getTranslatedSchedule = (schedule: string, t: (key: string) => string): string => {
+  if (schedule.includes('Sexta-feira, 8:00 às 9:30')) return t('projectData.schedules.friday');
+  if (schedule.includes('Segunda e Quinta, 17:30 às 19:00')) return t('projectData.schedules.mondayThursday');
+  if (schedule.includes('Quarta-feira, 18:00 às 19:30')) return t('projectData.schedules.wednesday');
+  if (schedule.includes('Sábado, 8:00 às 10:00')) return t('projectData.schedules.saturday');
+  if (schedule.includes('Terça-feira, 8:00 às 9:30')) return t('projectData.schedules.tuesday');
+  if (schedule.includes('Segunda a Sexta, 9:45 às 11:00')) return t('projectData.schedules.mondayFriday');
+  if (schedule.includes('Quarta-feira, 14:00 às 15:30')) return t('projectData.schedules.wednesdayThursday');
+  return schedule;
+};
+
+const getTranslatedImpact = (id: number, t: (key: string) => string): string => {
+  switch (id) {
+    case 1: return t('projectData.capoeira.impact');
+    case 2: return t('projectData.football.impact');
+    case 3: return t('projectData.music.impact');
+    default: return '';
+  }
+};
+
+const getTranslatedGalleryAlt = (projectId: number, alt: string, t: (key: string) => string): string => {
+  switch (projectId) {
+    case 1: return t('projectData.capoeira.gallery.alt');
+    case 5: return t('projectData.tutoring.gallery.alt');
+    default: return alt;
+  }
+};
+
+const getTranslatedGalleryCaption = (projectId: number, caption: string, t: (key: string) => string): string => {
+  switch (projectId) {
+    case 1: return t('projectData.capoeira.gallery.caption');
+    case 5: return t('projectData.tutoring.gallery.caption');
+    default: return caption;
+  }
 };
 
 export default Projetos;

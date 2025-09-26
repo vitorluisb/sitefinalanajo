@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { X, ChevronLeft, ChevronRight, Users, MapPin, Clock } from 'lucide-react';
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 
 interface ProjectCarouselProps {
   project: {
@@ -33,33 +33,90 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (!isOpen) return;
-    
-    switch (event.key) {
-      case 'Escape':
-        onClose();
-        break;
-      case 'ArrowLeft':
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-        break;
-      case 'ArrowRight':
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-        break;
+  // Safety checks
+  if (!project) {
+    console.warn('ProjectCarousel: project is undefined');
+    return null;
+  }
+
+  const safeImages = images || [];
+  const hasImages = safeImages.length > 0;
+
+  // Reset current index when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(0);
     }
-  }, [isOpen, images.length, onClose]);
+  }, [isOpen]);
+
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
+    const handleKeyDownEvent = (event: KeyboardEvent) => {
+      if (!isOpen) return;
+      
+      switch (event.key) {
+        case 'Escape':
+          onClose();
+          break;
+        case 'ArrowLeft':
+          if (hasImages) {
+            setCurrentIndex((prev) => (prev - 1 + safeImages.length) % safeImages.length);
+          }
+          break;
+        case 'ArrowRight':
+          if (hasImages) {
+            setCurrentIndex((prev) => (prev + 1) % safeImages.length);
+          }
+          break;
+      }
+    };
 
-  if (!isOpen) return null;
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDownEvent);
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleKeyDownEvent);
+    };
+  }, [isOpen, safeImages.length, onClose, hasImages]);
+
+  // Manage body scroll when modal is open - SINGLE EFFECT
+  useEffect(() => {
+    if (isOpen) {
+      // Store original overflow value
+      const originalOverflow = document.body.style.overflow;
+      const originalPointerEvents = document.body.style.pointerEvents;
+      
+      // Apply modal styles
+      document.body.style.overflow = 'hidden';
+      document.body.style.pointerEvents = 'auto';
+      
+      // Cleanup function - runs when modal closes or component unmounts
+      return () => {
+        document.body.style.overflow = originalOverflow || '';
+        document.body.style.pointerEvents = originalPointerEvents || '';
+        // Force a reflow to ensure styles are applied
+        document.body.offsetHeight;
+      };
+    }
+  }, [isOpen]);
+
+  // Early return if modal is not open - no additional cleanup needed
+  if (!isOpen) {
+    return null;
+  }
 
   // When only the description should be shown (no images, no extra sections)
   if (showDescriptionOnly) {
     return (
-      <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center animate-fade-in">
+      <div 
+        className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center animate-fade-in"
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            onClose();
+          }
+        }}
+      >
         <div className="max-w-2xl w-full bg-white rounded-xl overflow-hidden mx-4 relative">
           <button
             onClick={onClose}
@@ -77,12 +134,16 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
   }
 
   const nextImage = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  }, [images.length]);
+    if (hasImages) {
+      setCurrentIndex((prev) => (prev + 1) % safeImages.length);
+    }
+  }, [safeImages.length, hasImages]);
 
   const prevImage = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  }, [images.length]);
+    if (hasImages) {
+      setCurrentIndex((prev) => (prev - 1 + safeImages.length) % safeImages.length);
+    }
+  }, [safeImages.length, hasImages]);
 
   const selectImage = useCallback((index: number) => {
     setCurrentIndex(index);
@@ -126,7 +187,14 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
   const safeRequirements = project.requirements || '—';
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center animate-fade-in p-2 sm:p-4">
+    <div 
+      className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center animate-fade-in p-2 sm:p-4"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
+    >
       <div className="w-full max-w-6xl modal-responsive bg-white rounded-xl overflow-hidden flex flex-col lg:flex-row">
         {/* Image Section */}
         <div className="flex-1 relative modal-image-section">
@@ -139,7 +207,7 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
           </button>
 
           {/* Navigation Buttons */}
-          {images.length > 1 && (
+          {hasImages && safeImages.length > 1 && (
             <>
               <button
                 onClick={prevImage}
@@ -157,26 +225,30 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
             </>
           )}
 
-          {/* Main Image */}
+          {/* Main Image or Fallback */}
           <div className="h-full">
-            <img
-              src={images[currentIndex]?.src}
-              alt={images[currentIndex]?.alt}
-              className="w-full h-full object-cover"
-            />
-            
-            {/* Image Caption */}
-            {!photosOnly && images[currentIndex]?.caption && (
-              <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 bg-black/70 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-lg">
-                <p className="text-xs sm:text-sm">{images[currentIndex].caption}</p>
+            {hasImages ? (
+              <img
+                src={safeImages[currentIndex]?.src}
+                alt={safeImages[currentIndex]?.alt}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <div className="text-4xl mb-2">📷</div>
+                  <p>Nenhuma imagem disponível</p>
+                </div>
               </div>
             )}
+            
+            {/* Image Caption - Removed overlay, will be shown in info section instead */}
           </div>
 
           {/* Image Indicators */}
-          {!photosOnly && images.length > 1 && (
+          {!photosOnly && hasImages && safeImages.length > 1 && (
             <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2 bg-black/30 backdrop-blur-sm px-3 py-2 rounded-full">
-              {images.map((_, index) => (
+              {safeImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => selectImage(index)}
@@ -211,6 +283,15 @@ const ProjectCarousel = ({ project, images, isOpen, onClose, showDescriptionOnly
                   <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     {project.description}
                   </p>
+                  
+                  {/* Image Caption - Show current image caption if available */}
+                  {hasImages && safeImages[currentIndex]?.caption && (
+                    <div className="mt-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
+                      <p className="text-sm text-gray-700 font-medium">
+                        📷 {safeImages[currentIndex].caption}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Details */}

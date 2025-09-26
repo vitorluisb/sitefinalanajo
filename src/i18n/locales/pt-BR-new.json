@@ -50,9 +50,12 @@
     }
   },
   "projects": {
-    "title": "Our Projects",
-    "subtitle": "Discover the initiatives that are transforming our community",
-    "viewAll": "View all projects",
+    "title": "Our Featured Projects",
+    "subtitle": "Learn about some of the projects that are transforming lives and building a better future for our community.",
+    "participants": "participants",
+    "branches": "branches",
+    "schedules": "Various schedules",
+    "viewAll": "View All Projects",
     "learnMore": "Learn more"
   },
   "volunteer": {
@@ -111,14 +114,6 @@
       }
     },
     "quote": "Every child who goes through our projects takes with them not only knowledge, but the certainty that their dreams are possible and valid."
-  },
-  "projects": {
-    "title": "Our Featured Projects",
-    "subtitle": "Learn about some of the projects that are transforming lives and building a better future for our community.",
-    "participants": "participants",
-    "branches": "branches",
-    "schedules": "Various schedules",
-    "viewAll": "View All Projects"
   },
   "supporters": {
     "title": "Our Supporters",
