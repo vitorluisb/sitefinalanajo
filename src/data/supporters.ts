@@ -36,7 +36,7 @@ const companies: Omit<Company, 'name' | 'contribution'>[] = [
 
 
 
-const companyKeys = ['prefeitura', 'pm', 'kinderhilfswerk', 'idealCapoeira', 'cozinhaSolidaria'];
+const companyKeys = ['prefeitura', 'pm', 'kinder', 'ideal', 'cozinhaSolidaria'];
 
 export const useTranslatedSupporters = () => {
   const { t } = useTranslation();

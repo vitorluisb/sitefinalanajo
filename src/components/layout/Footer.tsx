@@ -2,9 +2,12 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { BrazilFlag, AustriaFlag, EnglandFlag } from '@/components/ui/flags';
 import { useTranslation } from 'react-i18next';
+import VideoModal from '@/components/ui/VideoModal';
+import { useState } from 'react';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const currentYear = new Date().getFullYear();
   
   return (
@@ -38,9 +41,12 @@ const Footer = () => {
               <a href="https://www.instagram.com/associacaoanajo/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <button 
+                onClick={() => setIsVideoOpen(true)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Youtube className="w-5 h-5" />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -98,6 +104,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoSrc="/AssociaçãoAnajoVideo.mp4"
+        title="Associação Anajô - Nossa História"
+      />
     </footer>
   );
 };

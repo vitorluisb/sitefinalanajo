@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Users, Play, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import VideoModal from '@/components/ui/VideoModal';
 
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const { t } = useTranslation();
   
   const slides = [
@@ -144,17 +146,17 @@ const HeroSection = () => {
 
           {/* Stats */}
           <div className="animate-scale-in">
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-6 sm:pt-8 border-t border-white/20 max-w-2xl mx-auto px-4 sm:px-0">
+            <div className="grid grid-cols-3 gap-1 sm:gap-4 md:gap-6 pt-3 sm:pt-6 md:pt-8 border-t border-white/20 max-w-2xl mx-auto px-2 sm:px-4 md:px-0 mb-4 sm:mb-0">
               <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{t('hero.stats.childrenNumber')}</div>
+                <div className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1">{t('hero.stats.childrenNumber')}</div>
                 <div className="text-xs sm:text-sm text-gray-300 leading-tight">{t('hero.stats.children')}</div>
               </div>
               <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{t('hero.stats.projectsNumber')}</div>
+                <div className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1">{t('hero.stats.projectsNumber')}</div>
                 <div className="text-xs sm:text-sm text-gray-300 leading-tight">{t('hero.stats.projects')}</div>
               </div>
               <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{t('hero.stats.yearsNumber')}</div>
+                <div className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 sm:mb-1">{t('hero.stats.yearsNumber')}</div>
                 <div className="text-xs sm:text-sm text-gray-300 leading-tight">{t('hero.stats.years')}</div>
               </div>
             </div>
@@ -162,13 +164,41 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Video Play Button */}
-      <div className="absolute bottom-6 sm:bottom-8 right-4 sm:right-8 hidden lg:block animate-fade-in">
-        <button className="group bg-white/20 backdrop-blur-sm rounded-full p-3 sm:p-4 hover:bg-white/30 transition-all duration-300 hover:scale-110">
-          <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
-        </button>
-        <p className="text-white text-xs sm:text-sm mt-2 text-center">{t('hero.watchVideo')}</p>
+      {/* Video Play Button - Mobile: Center Bottom, Desktop: Right */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-6 md:bottom-8 sm:left-auto sm:right-8 sm:transform-none animate-fade-in">
+        <div className="flex flex-col items-center space-y-1.5 sm:space-y-3">
+          {/* Main Play Button */}
+          <button 
+            onClick={() => setIsVideoOpen(true)}
+            className="group relative bg-gradient-to-br from-blue-500/90 to-blue-600/90 backdrop-blur-md rounded-full p-2.5 sm:p-4 md:p-5 hover:from-blue-400/90 hover:to-blue-500/90 transition-all duration-500 hover:scale-110 shadow-2xl border border-blue-400/50 hover:border-blue-300/70 play-button-glow play-button-pulse"
+          >
+            {/* Pulsing Ring Effect */}
+            <div className="absolute inset-0 rounded-full bg-blue-400/30 animate-ping opacity-75 group-hover:opacity-100"></div>
+            <div className="absolute inset-0 rounded-full bg-blue-300/20 animate-pulse"></div>
+            
+            {/* Play Icon */}
+            <div className="relative z-10">
+              <Play className="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white ml-1 drop-shadow-lg group-hover:scale-110 transition-transform duration-300" />
+            </div>
+          </button>
+
+          {/* Text with enhanced styling */}
+          <div className="text-center">
+            <p className="text-white text-xs sm:text-sm md:text-base font-medium drop-shadow-lg">
+              {t('hero.watchVideo')}
+            </p>
+            <div className="w-6 sm:w-12 md:w-16 h-0.5 bg-white/60 mx-auto mt-1 sm:mt-2 rounded-full group-hover:w-8 sm:group-hover:w-16 md:group-hover:w-20 transition-all duration-300"></div>
+          </div>
+        </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoSrc="/AssociaçãoAnajoVideo.mp4"
+        title="Associação Anajô - Nossa História"
+      />
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-16 sm:bottom-20 left-1/2 transform -translate-x-1/2 hidden md:block animate-bounce">

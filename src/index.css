@@ -552,4 +552,31 @@
   .accent-red {
     @apply border-l-4 border-destructive bg-destructive-soft;
   }
+
+  /* Play Button Animations */
+  .play-button-glow {
+    animation: play-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes play-glow {
+    0% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3);
+    }
+  }
+
+  .play-button-pulse {
+    animation: play-pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes play-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
 }
